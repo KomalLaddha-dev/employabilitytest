@@ -27,6 +27,25 @@
             background-color: #f3f4f6;
             border-left: 4px solid #6b7280;
         }
+        pre {
+            background-color: #2d3748; /* bg-gray-800 */
+            color: #e2e8f0; /* text-gray-200 */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+        code {
+            font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+            background-color: #e2e8f0; /* bg-gray-200 */
+            color: #3b82f6; /* text-blue-600 */
+            padding: 0.2em 0.4em;
+            border-radius: 0.25em;
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -72,16 +91,76 @@
             qa: {
                 title: "Quantitative Aptitude",
                 questions: [
-                    { question: "A trader marks his goods at 40% above the cost price and allows a discount of 25%. What is his gain percent?", options: ["5%", "10%", "15%", "20%"], answer: "5%", rationale: "Let the cost price (CP) be 100. Marked Price (MP) = 100 + 40% of 100 = 140. Discount = 25% of 140 = 35. Selling Price (SP) = 140 - 35 = 105. Gain = SP - CP = 105 - 100 = 5. Gain % = (Gain/CP) * 100 = (5/100) * 100 = 5%." },
-                    { question: "The compound interest on a certain sum for 2 years at 10% per annum is ₹525. The simple interest on the same sum for double the time at half the rate percent per annum is:", options: ["₹400", "₹500", "₹600", "₹800"], answer: "₹500", rationale: "Let P be the principal. CI = P(1 + R/100)^T - P. 525 = P(1 + 10/100)^2 - P => 525 = P(1.1^2 - 1) => 525 = 0.21P => P = 525 / 0.21 = 2500. Now, SI = (P * R * T) / 100. New Time = 2*2 = 4 years. New Rate = 10/2 = 5%. SI = (2500 * 5 * 4) / 100 = ₹500." },
-                    { question: "If 7 spiders make 7 webs in 7 days, then 1 spider will make 1 web in how many days?", options: ["1 day", "7 days", "14 days", "49 days"], answer: "7 days", rationale: "This is a classic work and time problem. Use the formula (M1 * D1) / W1 = (M2 * D2) / W2. (7 spiders * 7 days) / 7 webs = (1 spider * D2) / 1 web. => 7 = D2. So, it takes 1 spider 7 days to make 1 web." },
-                    { question: "A boat travels 20 km upstream in 5 hours and 30 km downstream in 3 hours. Find the speed of the boat in still water and the speed of the stream.", options: ["7 km/hr, 3 km/hr", "8 km/hr, 2 km/hr", "9 km/hr, 1 km/hr", "6 km/hr, 4 km/hr"], answer: "7 km/hr, 3 km/hr", rationale: "Upstream speed (u) = 20/5 = 4 km/hr. Downstream speed (d) = 30/3 = 10 km/hr. Speed of boat in still water (b) = (d + u) / 2 = (10 + 4) / 2 = 7 km/hr. Speed of stream (s) = (d - u) / 2 = (10 - 4) / 2 = 3 km/hr." },
-                    { question: "The average of 5 consecutive odd numbers is 27. What is the largest of these numbers?", options: ["29", "31", "33", "35"], answer: "31", rationale: "For consecutive numbers, the average is the middle number. So, the middle (3rd) odd number is 27. The 5 consecutive odd numbers are 23, 25, 27, 29, 31. The largest number is 31." },
-                    { question: "A train 150 m long is running at 72 km/hr. In how much time will it pass a platform 250 m long?", options: ["15 sec", "20 sec", "25 sec", "30 sec"], answer: "20 sec", rationale: "Total distance to be covered = Length of train + Length of platform = 150 + 250 = 400 m. Speed of train = 72 km/hr = 72 * (5/18) m/s = 20 m/s. Time = Distance / Speed = 400 / 20 = 20 seconds." },
-                    { question: "If a:b = 5:7 and b:c = 6:11, then find a:b:c.", options: ["30:42:77", "35:42:77", "30:49:77", "30:42:66"], answer: "30:42:77", rationale: "To find a:b:c, we need to make the value of 'b' common in both ratios. a:b = 5:7 and b:c = 6:11. Multiply the first ratio by 6 and the second by 7. a:b = 30:42. b:c = 42:77. Therefore, a:b:c = 30:42:77." },
-                    { question: "A can do a piece of work in 15 days and B in 20 days. If they work on it together for 4 days, then the fraction of the work that is left is:", options: ["1/4", "1/10", "7/15", "8/15"], answer: "8/15", rationale: "A's 1 day's work = 1/15. B's 1 day's work = 1/20. (A+B)'s 1 day's work = 1/15 + 1/20 = (4+3)/60 = 7/60. Work done in 4 days = 4 * (7/60) = 7/15. Remaining work = 1 - 7/15 = 8/15." },
-                    { question: "The sum of the digits of a two-digit number is 9. If 27 is added to the number, the digits get reversed. The number is:", options: ["27", "63", "36", "45"], answer: "36", rationale: "Let the number be 10x + y. Given x+y=9 and 10x+y+27 = 10y+x. This simplifies to 9y - 9x = 27, or y - x = 3. Solving x+y=9 and y-x=3, we get 2y=12 => y=6 and x=3. The number is 36." },
-                    { question: "The perimeter of a rectangular field is 480 meters and the ratio between the length and breadth is 5:3. The area of the field is:", options: ["13500 sq.m", "12500 sq.m", "11500 sq.m", "10500 sq.m"], answer: "13500 sq.m", rationale: "Let length = 5x and breadth = 3x. Perimeter = 2(l+b) = 2(5x+3x) = 16x. 16x = 480 => x = 30. Length = 5*30 = 150 m. Breadth = 3*30 = 90 m. Area = l * b = 150 * 90 = 13500 sq.m." },
+                    // Question 1
+                    {
+                        question: "A trader marks his goods at 40% above the cost price and allows a discount of 25%. What is his gain percent?",
+                        options: ["5%", "10%", "15%", "20%"],
+                        answer: "5%",
+                        rationale: "Let the cost price (CP) be 100. Marked Price (MP) = 100 + 40% of 100 = 140. Discount = 25% of 140 = 35. Selling Price (SP) = 140 - 35 = 105. Gain = SP - CP = 105 - 100 = 5. Gain % = (Gain/CP) * 100 = (5/100) * 100 = 5%."
+                    },
+                    // Question 2
+                    {
+                        question: "The compound interest on a certain sum for 2 years at 10% per annum is ₹525. The simple interest on the same sum for double the time at half the rate percent per annum is:",
+                        options: ["₹400", "₹500", "₹600", "₹800"],
+                        answer: "₹500",
+                        rationale: "Let P be the principal. CI = P(1 + R/100)^T - P. 525 = P(1 + 10/100)^2 - P => 525 = P(1.1^2 - 1) => 525 = 0.21P => P = 525 / 0.21 = 2500. Now, SI = (P * R * T) / 100. New Time = 2*2 = 4 years. New Rate = 10/2 = 5%. SI = (2500 * 5 * 4) / 100 = ₹500."
+                    },
+                    // Question 3
+                    {
+                        question: "If 7 spiders make 7 webs in 7 days, then 1 spider will make 1 web in how many days?",
+                        options: ["1 day", "7 days", "14 days", "49 days"],
+                        answer: "7 days",
+                        rationale: "This is a classic work and time problem. Use the formula (M1 * D1) / W1 = (M2 * D2) / W2. (7 spiders * 7 days) / 7 webs = (1 spider * D2) / 1 web. => 7 = D2. So, it takes 1 spider 7 days to make 1 web."
+                    },
+                    // Question 4
+                    {
+                        question: "A boat travels 20 km upstream in 5 hours and 30 km downstream in 3 hours. Find the speed of the boat in still water and the speed of the stream.",
+                        options: ["7 km/hr, 3 km/hr", "8 km/hr, 2 km/hr", "9 km/hr, 1 km/hr", "6 km/hr, 4 km/hr"],
+                        answer: "7 km/hr, 3 km/hr",
+                        rationale: "Upstream speed (u) = 20/5 = 4 km/hr. Downstream speed (d) = 30/3 = 10 km/hr. Speed of boat in still water (b) = (d + u) / 2 = (10 + 4) / 2 = 7 km/hr. Speed of stream (s) = (d - u) / 2 = (10 - 4) / 2 = 3 km/hr."
+                    },
+                    // Question 5
+                    {
+                        question: "The average of 5 consecutive odd numbers is 27. What is the largest of these numbers?",
+                        options: ["29", "31", "33", "35"],
+                        answer: "31",
+                        rationale: "For consecutive numbers, the average is the middle number. So, the middle (3rd) odd number is 27. The 5 consecutive odd numbers are 23, 25, 27, 29, 31. The largest number is 31."
+                    },
+                    // Question 6
+                    {
+                        question: "A train 150 m long is running at 72 km/hr. In how much time will it pass a platform 250 m long?",
+                        options: ["15 sec", "20 sec", "25 sec", "30 sec"],
+                        answer: "20 sec",
+                        rationale: "Total distance to be covered = Length of train + Length of platform = 150 + 250 = 400 m. Speed of train = 72 km/hr = 72 * (5/18) m/s = 20 m/s. Time = Distance / Speed = 400 / 20 = 20 seconds."
+                    },
+                    // Question 7
+                    {
+                        question: "If a:b = 5:7 and b:c = 6:11, then find a:b:c.",
+                        options: ["30:42:77", "35:42:77", "30:49:77", "30:42:66"],
+                        answer: "30:42:77",
+                        rationale: "To find a:b:c, we need to make the value of 'b' common in both ratios. a:b = 5:7 and b:c = 6:11. Multiply the first ratio by 6 and the second by 7. a:b = 30:42. b:c = 42:77. Therefore, a:b:c = 30:42:77."
+                    },
+                    // Question 8
+                    {
+                        question: "A can do a piece of work in 15 days and B in 20 days. If they work on it together for 4 days, then the fraction of the work that is left is:",
+                        options: ["1/4", "1/10", "7/15", "8/15"],
+                        answer: "8/15",
+                        rationale: "A's 1 day's work = 1/15. B's 1 day's work = 1/20. (A+B)'s 1 day's work = 1/15 + 1/20 = (4+3)/60 = 7/60. Work done in 4 days = 4 * (7/60) = 7/15. Remaining work = 1 - 7/15 = 8/15."
+                    },
+                    // Question 9
+                    {
+                        question: "The sum of the digits of a two-digit number is 9. If 27 is added to the number, the digits get reversed. The number is:",
+                        options: ["27", "63", "36", "45"],
+                        answer: "36",
+                        rationale: "Let the number be 10x + y. Given x+y=9 and 10x+y+27 = 10y+x. This simplifies to 9y - 9x = 27, or y - x = 3. Solving x+y=9 and y-x=3, we get 2y=12 => y=6 and x=3. The number is 36."
+                    },
+                    // Question 10
+                    {
+                        question: "The perimeter of a rectangular field is 480 meters and the ratio between the length and breadth is 5:3. The area of the field is:",
+                        options: ["13500 sq.m", "12500 sq.m", "11500 sq.m", "10500 sq.m"],
+                        answer: "13500 sq.m",
+                        rationale: "Let length = 5x and breadth = 3x. Perimeter = 2(l+b) = 2(5x+3x) = 16x. 16x = 480 => x = 30. Length = 5*30 = 150 m. Breadth = 3*30 = 90 m. Area = l * b = 150 * 90 = 13500 sq.m."
+                    },
                     { question: "If the radius of a sphere is increased by 50%, find the percentage increase in its surface area.", options: ["100%", "125%", "150%", "225%"], answer: "125%", rationale: "Let original radius be R. New radius R' = 1.5R. Original surface area A = 4πR². New surface area A' = 4π(1.5R)² = 4π(2.25R²) = 2.25 * A. Increase = A' - A = 1.25A. Percentage increase = (1.25A / A) * 100 = 125%." },
                     { question: "A mixture of 40 liters of milk and water contains 10% water. How much water must be added to make the water 20% in the new mixture?", options: ["5 liters", "6 liters", "8 liters", "10 liters"], answer: "5 liters", rationale: "Initial mixture: 40 liters. Water = 10% of 40 = 4L. Milk = 36L. Let x liters of water be added. New mixture = 40+x. New water = 4+x. We want (4+x)/(40+x) = 20/100 = 1/5. 5(4+x) = 40+x => 20+5x = 40+x => 4x = 20 => x=5 liters." },
                     { question: "Two pipes A and B can fill a tank in 20 and 30 minutes respectively. If both pipes are used together, then how long will it take to fill the tank?", options: ["12 min", "15 min", "25 min", "50 min"], answer: "12 min", rationale: "Work done by A in 1 min = 1/20. Work done by B in 1 min = 1/30. Work done by (A+B) in 1 min = 1/20 + 1/30 = (3+2)/60 = 5/60 = 1/12. So, both pipes together will fill the tank in 12 minutes." },
@@ -102,8 +181,14 @@
                     { question: "A person crosses a 600 m long street in 5 minutes. What is his speed in km/hr?", options: ["3.6 km/hr", "7.2 km/hr", "8.4 km/hr", "10 km/hr"], answer: "7.2 km/hr", rationale: "Speed = Distance/Time = 600m / (5 * 60 sec) = 600/300 = 2 m/s. To convert m/s to km/hr, multiply by 18/5. Speed = 2 * (18/5) = 36/5 = 7.2 km/hr." },
                     { question: "The difference between 78% of a number and 59% of the same number is 323. What is 62% of that number?", options: ["1054", "1154", "1037", "1178"], answer: "1054", rationale: "Let the number be x. 78% of x - 59% of x = 323 => 19% of x = 323. 0.19x = 323 => x = 323 / 0.19 = 1700. Now, 62% of 1700 = 0.62 * 1700 = 1054." },
                     { question: "If x + 1/x = 3, then the value of x³ + 1/x³ is:", options: ["18", "24", "27", "36"], answer: "18", rationale: "We know (x + 1/x)³ = x³ + 1/x³ + 3(x)(1/x)(x + 1/x). Let x + 1/x = k. Then x³ + 1/x³ = k³ - 3k. Here k=3. So, x³ + 1/x³ = 3³ - 3*3 = 27 - 9 = 18." },
-                    { question: "A sum of ₹1800 is divided among A, B, C such that A's share is 1/2 of B's share and C's share is 3/2 of B's share. Find B's share.", options: ["₹300", "₹600", "₹900", "₹1200"], answer: "₹600", rationale: "Let B's share be B. A's share = B/2. C's share = 3B/2. Total sum = A + B + C = B/2 + B + 3B/2 = 1800. (B + 2B + 3B)/2 = 1800 => 6B/2 = 1800 => 3B = 1800 => B = ₹600." },
-                    { question: "A train running at 54 km/hr crosses a man in 20 seconds. Find the length of the train.", options: ["200 m", "250 m", "300 m", "350 m"], answer: "300 m", rationale: "Speed = 54 km/hr = 54 * (5/18) m/s = 15 m/s. Time = 20 seconds. When a train crosses a man, the distance covered is the length of the train. Length of train = Speed * Time = 15 m/s * 20 s = 300 meters." },
+                    { question: "A sum of ₹1800 is divided among A, B, C, D in the proportion 5:2:4:3. If C gets ₹1000 more than D, what is B's share?", options: ["₹2000", "₹3000", "₹4000", "₹5000"], answer: "₹2000", rationale: "Let the shares be 5x, 2x, 4x, 3x. C gets 4x, D gets 3x. C - D = 1000 => 4x - 3x = 1000 => x = 1000. B's share = 2x = 2 * 1000 = ₹2000." },
+                    { question: "The area of a circle inscribed in a square of side 14 cm is:", options: ["154 cm²", "184 cm²", "196 cm²", "204 cm²"], answer: "154 cm²", rationale: "The diameter of the inscribed circle is equal to the side of the square. Diameter = 14 cm, so Radius = 7 cm. Area of circle = πr² = (22/7) * 7 * 7 = 154 cm²." },
+                    { question: "A batsman scores 87 runs in the 17th inning and thus increases his average by 3. Find his average after the 17th inning.", options: ["36", "39", "42", "45"], answer: "39", rationale: "Let average after 16 innings be x. Total runs = 16x. (16x + 87) / 17 = x + 3. 16x + 87 = 17x + 51. x = 36. Average after 17th inning = x + 3 = 36 + 3 = 39." },
+                    { question: "What is the angle between the hour hand and the minute hand of a clock at 4:20?", options: ["0°", "5°", "10°", "15°"], answer: "10°", rationale: "Angle = |(60H - 11M) / 2|. Here H=4, M=20. Angle = |(240 - 220) / 2| = |20 / 2| = 10°." },
+                    { question: "A person crosses a 600 m long street in 5 minutes. What is his speed in km/hr?", options: ["3.6 km/hr", "7.2 km/hr", "8.4 km/hr", "10 km/hr"], answer: "7.2 km/hr", rationale: "Speed = Distance/Time = 600m / (5 * 60 sec) = 600/300 = 2 m/s. To convert m/s to km/hr, multiply by 18/5. Speed = 2 * (18/5) = 36/5 = 7.2 km/hr." },
+                    { question: "The difference between 78% of a number and 59% of the same number is 323. What is 62% of that number?", options: ["1054", "1154", "1037", "1178"], answer: "1054", rationale: "Let the number be x. 78% of x - 59% of x = 323 => 19% of x = 323. 0.19x = 323 => x = 323 / 0.19 = 1700. Now, 62% of 1700 = 0.62 * 1700 = 1054." },
+                    { question: "If x + 1/x = 3, then the value of x³ + 1/x³ is:", options: ["18", "24", "27", "36"], answer: "18", rationale: "We know (x + 1/x)³ = x³ + 1/x³ + 3(x)(1/x)(x + 1/x). Let x + 1/x = k. Then x³ + 1/x³ = k³ - 3k. Here k=3. So, x³ + 1/x³ = 3³ - 3*3 = 27 - 9 = 18." },
+                    { question: "A sum of ₹1800 is divided among A, B, C, D in the proportion 5:2:4:3. If C gets ₹1000 more than D, what is B's share?", options: ["₹2000", "₹3000", "₹4000", "₹5000"], answer: "₹2000", rationale: "Let the shares be 5x, 2x, 4x, 3x. C gets 4x, D gets 3x. C - D = 1000 => 4x - 3x = 1000 => x = 1000. B's share = 2x = 2 * 1000 = ₹2000." },
                     { question: "The ratio of the number of boys and girls in a school is 3:2. If 20% of the boys and 25% of the girls are scholarship holders, the percentage of students who are not scholarship holders is:", options: ["78%", "79%", "80%", "81%"], answer: "78%", rationale: "Let the number of boys be 3x and girls be 2x. Total students = 5x. Boys not holding scholarship = (100-20)% of 3x = 80% of 3x = 0.8 * 3x = 2.4x. Girls not holding scholarship = (100-25)% of 2x = 75% of 2x = 0.75 * 2x = 1.5x. Total students not holding scholarship = 2.4x + 1.5x = 3.9x. Percentage of students not holding scholarship = (3.9x / 5x) * 100 = (3.9 / 5) * 100 = 0.78 * 100 = 78%." },
                     { question: "A certain sum of money amounts to ₹6600 in 2 years and ₹9900 in 4 years at simple interest. Find the sum.", options: ["₹3300", "₹4400", "₹5500", "₹6600"], answer: "₹3300", rationale: "Let P be the principal and R be the rate. P + (P*R*2)/100 = 6600. P + (P*R*4)/100 = 9900. Subtracting the first equation from the second: (P*R*2)/100 = 9900 - 6600 = 3300. So, (P*R*2)/100 = 3300. Substitute this back into the first equation: P + 3300 = 6600 => P = ₹3300." },
                     { question: "The cost price of 20 articles is the same as the selling price of x articles. If the profit is 25%, then the value of x is:", options: ["15", "16", "18", "20"], answer: "16", rationale: "Let CP of 1 article be ₹1. Then CP of 20 articles = ₹20. SP of x articles = ₹20. SP of 1 article = ₹(20/x). Profit = SP - CP = (20/x) - 1. Profit % = ((20/x - 1) / 1) * 100 = 25. (20/x - 1) = 0.25 => 20/x = 1.25 => x = 20 / 1.25 = 16." },
@@ -132,400 +217,1166 @@
             reasoning: {
                 title: "Analytical Reasoning",
                 questions: [
-                    { question: "Find the next term in the series: 3, 7, 16, 35, 74, ___", options: ["150", "153", "155", "157"], answer: "153", rationale: "The pattern is *2+1, *2+2, *2+3, *2+4, ... So, 3*2+1=7, 7*2+2=16, 16*2+3=35, 35*2+4=74. The next term will be 74*2+5 = 148+5 = 153." },
-                    { question: "In a certain code, 'TEACHER' is coded as 'VGCEJGT'. How is 'CHILDREN' coded in that same code?", options: ["EJKNFTGP", "EJKNHTGP", "EIKNFTGP", "EJKMFJGP"], answer: "EJKNFTGP", rationale: "The pattern is to increment each letter by 2 positions in the alphabet. T(+2)=V, E(+2)=G, A(+2)=C, C(+2)=E, H(+2)=J, E(+2)=G, R(+2)=T. Applying this to CHILDREN: C(+2)=E, H(+2)=J, I(+2)=K, L(+2)=N, D(+2)=F, R(+2)=T, E(+2)=G, N(+2)=P. So, EJKNFTGP." },
-                    { question: "Pointing to a photograph, a man said, 'I have no brother or sister but that man's father is my father's son.' Whose photograph was it?", options: ["His own", "His son's", "His father's", "His nephew's"], answer: "His son's", rationale: "The man has no brother or sister. 'My father's son' can only be the man himself. So, 'that man's father is myself'. This means the man in the photograph is his son." },
-                    { question: "Which number completes the sequence: 1, 8, 27, 64, ___, 216?", options: ["100", "125", "150", "180"], answer: "125", rationale: "The series consists of perfect cubes: 1³=1, 2³=8, 3³=27, 4³=64. The next number should be 5³=125, followed by 6³=216." },
-                    { question: "If 'FATHER' is coded as 'JEXLIV', how is 'MOTHER' coded in that same code?", options: ["QSXLIV", "OSXLIV", "QSXLIW", "QTXLIV"], answer: "QSXLIV", rationale: "The pattern is to increment each letter by 4 positions in the alphabet. F(+4)=J, A(+4)=E, T(+4)=X, H(+4)=L, E(+4)=I, R(+4)=V. Applying this to MOTHER: M(+4)=Q, O(+4)=S, T(+4)=X, H(+4)=L, E(+4)=I, R(+4)=V. So, QSXLIV." },
-                    { question: "Introducing a girl, a boy said, 'She is the daughter of the only son of my grandfather.' How is the boy related to the girl?", options: ["Brother", "Father", "Uncle", "Cousin"], answer: "Brother", rationale: "The 'only son of my grandfather' refers to the boy's father. So, the girl is the daughter of the boy's father, which means she is the boy's sister. Therefore, the boy is the girl's brother." },
-                    { question: "Complete the series: B, D, G, K, P, ___", options: ["U", "V", "W", "X"], answer: "V", rationale: "The pattern of differences between consecutive letters is increasing: B(+2)D, D(+3)G, G(+4)K, K(+5)P. The next difference should be +6. P(+6)=V." },
-                    { question: "If 'PAPER' is coded as 'QBQFS', then 'HISTORY' will be coded as:", options: ["IJTUPSZ", "IJTUQSY", "IJTUPSX", "IJTUPRZ"], answer: "IJTUPSZ", rationale: "The pattern is to increment each letter by 1 position in the alphabet. P(+1)=Q, A(+1)=B, P(+1)=Q, E(+1)=F, R(+1)=S. Applying this to HISTORY: H(+1)=I, I(+1)=J, S(+1)=T, T(+1)=U, O(+1)=P, R(+1)=S, Y(+1)=Z. So, IJTUPSZ." },
-                    { question: "In a certain code, 'STATION' is written as 'TSAITNO'. How is 'TRAIN' written in that code?", options: ["RTIAN", "RTNIA", "IRTNA", "RTAIN"], answer: "RTIAN", rationale: "The pattern involves swapping adjacent pairs of letters. ST -> TS, AT -> TA, IO -> OI. The last letter 'N' remains in its place. Applying this to TRAIN: TR -> RT, AI -> IA. The last letter 'N' remains. So, RTIAN." },
-                    { question: "Look at this series: 2, 6, 12, 20, 30, ___. What number should come next?", options: ["40", "42", "44", "46"], answer: "42", rationale: "The differences between consecutive terms are increasing by 2 each time: +4, +6, +8, +10. The next difference should be +12. So, 30 + 12 = 42." },
-                    { question: "If 'CAT' is coded as 24, and 'DOG' is coded as 26, how is 'HEN' coded?", options: ["27", "25", "28", "29"], answer: "27", rationale: "The code is the sum of the alphabetical positions of the letters. C=3, A=1, T=20 => 3+1+20 = 24. D=4, O=15, G=7 => 4+15+7 = 26. H=8, E=5, N=14 => 8+5+14 = 27." },
-                    { question: "A man walks 10 km East, then 5 km North, then 10 km West. How far is he from his starting point?", options: ["0 km", "5 km", "10 km", "25 km"], answer: "5 km", rationale: "The 10 km East and 10 km West movements cancel each other out. The man is only displaced by the 5 km North movement from his starting point." },
-                    { question: "Find the odd one out: Lion, Tiger, Wolf, Elephant.", options: ["Lion", "Tiger", "Wolf", "Elephant"], answer: "Elephant", rationale: "Lion, Tiger, and Wolf are carnivores (meat-eaters). Elephant is a herbivore (plant-eater)." },
-                    { question: "What comes next in the series: A, E, I, O, ___?", options: ["U", "V", "W", "X"], answer: "U", rationale: "The series consists of the vowels in alphabetical order: A, E, I, O. The next vowel is U." },
-                    { question: "If 'Zebra' is coded as '2652181', how is 'Cow' coded?", options: ["31523", "301523", "31522", "31524"], answer: "31523", rationale: "Each letter is replaced by its alphabetical position. Z=26, E=5, B=2, R=18, A=1. So, Zebra is 2652181. Applying this to COW: C=3, O=15, W=23. So, 31523." },
-                    { question: "In a row of boys, A is 10th from the left and B is 9th from the right. If A and B interchange their positions, A becomes 15th from the left. How many boys are there in the row?", options: ["23", "24", "25", "26"], answer: "23", rationale: "When A and B interchange positions, A moves to B's original position. A's new position from left is 15th. B's original position from right was 9th. So, total boys = (A's new position from left) + (B's original position from right) - 1 = 15 + 9 - 1 = 23." },
-                    { question: "Choose the odd one out: Square, Rectangle, Triangle, Sphere.", options: ["Square", "Rectangle", "Triangle", "Sphere"], answer: "Sphere", rationale: "Square, Rectangle, and Triangle are 2-dimensional shapes (polygons). Sphere is a 3-dimensional shape." },
-                    { question: "What comes next in the series: January, March, May, July, ___?", options: ["August", "September", "October", "November"], answer: "September", rationale: "The series consists of months that are separated by one month (January, skip February, March, skip April, May, skip June, July). Following this pattern, after July, we skip August, and the next month is September." },
-                    { question: "If 'MASTER' is coded as 'OCUVGT', how is 'LABOUR' coded?", options: ["NCDQWT", "NCDQVU", "NCDQWU", "NCDQWV"], answer: "NCDQWT", rationale: "The pattern is to increment each letter by 2 positions in the alphabet. M(+2)=O, A(+2)=C, S(+2)=U, T(+2)=V, E(+2)=G, R(+2)=T. Applying this to LABOUR: L(+2)=N, A(+2)=C, B(+2)=D, O(+2)=Q, U(+2)=W, R(+2)=T. So, NCDQWT." },
-                    { question: "Five friends A, B, C, D, E are sitting in a row facing North. B is sitting between A and C. D is immediately to the right of C. E is at the extreme left. Who is sitting in the middle?", options: ["A", "B", "C", "D"], answer: "B", rationale: "E is at the extreme left. So, E _ _ _ _. D is immediately to the right of C. So, _ _ C D _. B is sitting between A and C. So, A B C. Combining: E A B C D. The middle person is B." },
-                    { question: "Find the missing number: 4, 9, 25, 49, ___, 169.", options: ["81", "100", "121", "144"], answer: "121", rationale: "The series consists of squares of prime numbers: 2²=4, 3²=9, 5²=25, 7²=49. The next prime number after 7 is 11. So, 11²=121. The next prime after 11 is 13, and 13²=169." },
-                    { question: "If 'WATER' is coded as 'TXSBQ', how is 'FIRE' coded?", options: ["CFQB", "EFQC", "DFQB", "CGQB"], answer: "CFQB", rationale: "The pattern for WATER to TXSBQ is W(-3)T, A(-3)X, T(-1)S, E(-3)B, R(-1)Q. Applying this to FIRE: F(-3)C, I(-3)F, R(-1)Q, E(-3)B. So, CFQB." },
-                    { question: "Pointing to a man in a photo, a woman said, 'His brother's father is the only son of my grandmother.' How is the woman related to the man?", options: ["Sister", "Mother", "Aunt", "Cousin"], answer: "Aunt", rationale: "Let's break it down: 'My grandmother's only son' refers to the woman's father (assuming her mother is her grandmother's daughter) or her uncle. However, for the relationship to be 'Aunt', the 'only son of my grandmother' must be the woman's brother, and this brother is the man's father. So, the man's father is the woman's brother. This makes the woman the man's aunt." },
-                    { question: "In a certain code, 'RUST' is written as 'QVRU'. How is 'LIVE' written?", options: ["KJUFB", "KJUFC", "KJUFD", "KJUFE"], answer: "KJUFB", rationale: "The pattern is an alternating shift: first letter -1, second letter +1, third letter -1, fourth letter +1. R(-1)Q, U(+1)V, S(-1)R, T(+1)U. Applying this to LIVE: L(-1)K, I(+1)J, V(-1)U, E(+1)F. So, KJUFB." },
-                    { question: "In a family, there are six members A, B, C, D, E, F. A and B are a married couple, A being the male member. D is the only son of C, who is the brother of A. E is the sister of D. B is the daughter-in-law of F, whose husband has died. How is F related to A?", options: ["Mother", "Sister", "Mother-in-law", "Aunt"], answer: "Mother", rationale: "A and B are a married couple, A is male, B is female. C is brother of A. D is only son of C. E is sister of D. So C is D's father, and E is D's sister. B is daughter-in-law of F. This means F is either A's mother or father. Since F's husband has died, F is A's mother. So F is A's mother." },
-                    { question: "Find the odd one out: 6, 12, 18, 25.", options: ["6", "12", "18", "25"], answer: "25", rationale: "6, 12, and 18 are multiples of 6. 25 is not a multiple of 6. Also, 25 is a perfect square (5²), while the others are not." },
-                    { question: "What comes next in the series: Mon, Tue, Wed, Thu, ___?", options: ["Fri", "Sat", "Sun", "Mon"], answer: "Fri", rationale: "The series consists of the first three letters of the days of the week in order. After Thursday, comes Friday." },
-                    { question: "If 'SPIN' is coded as '7953', and 'TOP' is coded as '239', how is 'SPOT' coded?", options: ["7932", "7923", "7952", "7925"], answer: "7932", rationale: "This is a direct substitution code. S=7, P=9, I=5, N=3. T=2, O=3, P=9. Note that P=9 in both. So, SPOT: S=7, P=9, O=3, T=2. So, 7932." },
-                    { question: "In a family, there are 8 members. A is the father of B. C is the daughter of A. D is the brother of B. E is the wife of A. F is the son of C. G is the brother of F. H is the wife of D. How many male members are there in the family?", options: ["3", "4", "5", "6"], answer: "5", rationale: "Let's identify the genders: A (Male), B (gender not specified, but D is his brother), C (Female), D (Male), E (Female), F (Male), G (Male), H (Female). From 'D is the brother of B', B's gender is not explicitly stated. However, in such puzzles, if a gender allows for an option, it's often implied. If B is male, then the males are A, B, D, F, G (5 males). If B is female, then A, D, F, G (4 males). Given the options, 5 is a plausible answer, implying B is male. So, A, B, D, F, G are the 5 male members." },
-                    { question: "Find the odd one out: 1, 8, 27, 36, 125.", options: ["1", "8", "27", "36", "125"], answer: "36", rationale: "The series consists of perfect cubes: 1³=1, 2³=8, 3³=27, 5³=125. However, 36 is a perfect square (6²), not a perfect cube. So, 36 is the odd one out." },
-                    { question: "What comes next in the series: 1, 1, 2, 3, 5, 8, ___?", options: ["11", "12", "13", "14"], answer: "13", rationale: "This is the Fibonacci sequence, where each number is the sum of the two preceding ones. 1+1=2, 1+2=3, 2+3=5, 3+5=8. The next term is 5+8=13." }
+                    // Question 1
+                    {
+                        question: "Find the next term in the series: 3, 7, 16, 35, 74, ___",
+                        options: ["150", "153", "155", "157"],
+                        answer: "153",
+                        rationale: "The pattern is *2+1, *2+2, *2+3, *2+4, ... So, 3*2+1=7, 7*2+2=16, 16*2+3=35, 35*2+4=74. The next term will be 74*2+5 = 148+5 = 153."
+                    },
+                    // Question 2
+                    {
+                        question: "In a certain code, 'TEACHER' is coded as 'VGCEJGT'. How is 'CHILDREN' coded in that same code?",
+                        options: ["EJKNFTGP", "EJKNHTGP", "EIKNFTGP", "EJKMFJGP"],
+                        answer: "EJKNFTGP",
+                        rationale: "The pattern is to increment each letter by 2 positions in the alphabet. T(+2)=V, E(+2)=G, A(+2)=C, C(+2)=E, H(+2)=J, E(+2)=G, R(+2)=T. Applying this to CHILDREN: C(+2)=E, H(+2)=J, I(+2)=K, L(+2)=N, D(+2)=F, R(+2)=T, E(+2)=G, N(+2)=P. So, EJKNFTGP."
+                    },
+                    // Question 3
+                    {
+                        question: "Pointing to a photograph, a man said, 'I have no brother or sister but that man's father is my father's son.' Whose photograph was it?",
+                        options: ["His own", "His son's", "His father's", "His nephew's"],
+                        answer: "His son's",
+                        rationale: "The man has no brother or sister. 'My father's son' can only be the man himself. So, 'that man's father is myself'. This means the man in the photograph is his son."
+                    },
+                    // Question 4
+                    {
+                        question: "Which number completes the sequence: 1, 8, 27, 64, ___, 216?",
+                        options: ["100", "125", "150", "180"],
+                        answer: "125",
+                        rationale: "The series consists of perfect cubes: 1³=1, 2³=8, 3³=27, 4³=64. The next number should be 5³=125, followed by 6³=216."
+                    },
+                    // Question 5
+                    {
+                        question: "If 'FATHER' is coded as 'JEXLIV', how is 'MOTHER' coded in that same code?",
+                        options: ["QSXLIV", "OSXLIV", "QSXLIW", "QTXLIV"],
+                        answer: "QSXLIV",
+                        rationale: "The pattern is to increment each letter by 4 positions in the alphabet. F(+4)=J, A(+4)=E, T(+4)=X, H(+4)=L, E(+4)=I, R(+4)=V. Applying this to MOTHER: M(+4)=Q, O(+4)=S, T(+4)=X, H(+4)=L, E(+4)=I, R(+4)=V. So, QSXLIV."
+                    },
+                    // Question 6
+                    {
+                        question: "Introducing a girl, a boy said, 'She is the daughter of the only son of my grandfather.' How is the boy related to the girl?",
+                        options: ["Brother", "Father", "Uncle", "Cousin"],
+                        answer: "Brother",
+                        rationale: "The 'only son of my grandfather' refers to the boy's father. So, the girl is the daughter of the boy's father, which means she is the boy's sister. Therefore, the boy is the girl's brother."
+                    },
+                    // Question 7
+                    {
+                        question: "Complete the series: B, D, G, K, P, ___",
+                        options: ["U", "V", "W", "X"],
+                        answer: "V",
+                        rationale: "The pattern of differences between consecutive letters is increasing: B(+2)D, D(+3)G, G(+4)K, K(+5)P. The next difference should be +6. P(+6)=V."
+                    },
+                    // Question 8
+                    {
+                        question: "If 'PAPER' is coded as 'QBQFS', then 'HISTORY' will be coded as:",
+                        options: ["IJTUPSZ", "IJTUQSY", "IJTUPSX", "IJTUPRZ"],
+                        answer: "IJTUPSZ",
+                        rationale: "The pattern is to increment each letter by 1 position in the alphabet. P(+1)=Q, A(+1)=B, P(+1)=Q, E(+1)=F, R(+1)=S. Applying this to HISTORY: H(+1)=I, I(+1)=J, S(+1)=T, T(+1)=U, O(+1)=P, R(+1)=S, Y(+1)=Z. So, IJTUPSZ."
+                    },
+                    // Question 9
+                    {
+                        question: "In a certain code, 'STATION' is written as 'TSAITNO'. How is 'TRAIN' written in that code?",
+                        options: ["RTIAN", "RTNIA", "IRTNA", "RTAIN"],
+                        answer: "RTIAN",
+                        rationale: "The pattern involves swapping adjacent pairs of letters. ST -> TS, AT -> TA, IO -> OI. The last letter 'N' remains in its place. Applying this to TRAIN: TR -> RT, AI -> IA. The last letter 'N' remains. So, RTIAN."
+                    },
+                    // Question 10
+                    {
+                        question: "Look at this series: 2, 6, 12, 20, 30, ___. What number should come next?",
+                        options: ["40", "42", "44", "46"],
+                        answer: "42",
+                        rationale: "The differences between consecutive terms are increasing by 2 each time: +4, +6, +8, +10. The next difference should be +12. So, 30 + 12 = 42."
+                    },
+                    {
+                        question: "If 'CAT' is coded as 24, and 'DOG' is coded as 26, how is 'HEN' coded?",
+                        options: ["27", "25", "28", "29"],
+                        answer: "27",
+                        rationale: "The code is the sum of the alphabetical positions of the letters. C=3, A=1, T=20 => 3+1+20 = 24. D=4, O=15, G=7 => 4+15+7 = 26. H=8, E=5, N=14 => 8+5+14 = 27."
+                    },
+                    {
+                        question: "A man walks 10 km East, then 5 km North, then 10 km West. How far is he from his starting point?",
+                        options: ["0 km", "5 km", "10 km", "25 km"],
+                        answer: "5 km",
+                        rationale: "The 10 km East and 10 km West movements cancel each other out. The man is only displaced by the 5 km North movement from his starting point."
+                    },
+                    {
+                        question: "Find the odd one out: Lion, Tiger, Wolf, Elephant.",
+                        options: ["Lion", "Tiger", "Wolf", "Elephant"],
+                        answer: "Elephant",
+                        rationale: "Lion, Tiger, and Wolf are carnivores (meat-eaters). Elephant is a herbivore (plant-eater)."
+                    },
+                    {
+                        question: "What comes next in the series: A, E, I, O, ___?",
+                        options: ["U", "V", "W", "X"],
+                        answer: "U",
+                        rationale: "The series consists of the vowels in alphabetical order: A, E, I, O. The next vowel is U."
+                    },
+                    {
+                        question: "If 'Zebra' is coded as '2652181', how is 'Cow' coded?",
+                        options: ["31523", "301523", "31522", "31524"],
+                        answer: "31523",
+                        rationale: "Each letter is replaced by its alphabetical position. Z=26, E=5, B=2, R=18, A=1. So, Zebra is 2652181. Applying this to COW: C=3, O=15, W=23. So, 31523."
+                    },
+                    {
+                        question: "In a row of boys, A is 10th from the left and B is 9th from the right. If A and B interchange their positions, A becomes 15th from the left. How many boys are there in the row?",
+                        options: ["23", "24", "25", "26"],
+                        answer: "23",
+                        rationale: "When A and B interchange positions, A moves to B's original position. A's new position from left is 15th. B's original position from right was 9th. So, total boys = (A's new position from left) + (B's original position from right) - 1 = 15 + 9 - 1 = 23."
+                    },
+                    {
+                        question: "Choose the odd one out: Square, Circle, Triangle, Rectangle.",
+                        options: ["Square", "Rectangle", "Triangle", "Sphere"],
+                        answer: "Sphere",
+                        rationale: "Square, Rectangle, and Triangle are 2-dimensional shapes (polygons). Sphere is a 3-dimensional shape."
+                    },
+                    {
+                        question: "What comes next in the series: January, March, May, July, ___?",
+                        options: ["August", "September", "October", "November"],
+                        answer: "September",
+                        rationale: "The series consists of months that are separated by one month (January, skip February, March, skip April, May, skip June, July). Following this pattern, after July, we skip August, and the next month is September."
+                    },
+                    {
+                        question: "If 'MASTER' is coded as 'OCUVGT', how is 'LABOUR' coded?",
+                        options: ["NCDQWT", "NCDQVU", "NCDQWU", "NCDQWV"],
+                        answer: "NCDQWT",
+                        rationale: "The pattern is to increment each letter by 2 positions in the alphabet. M(+2)=O, A(+2)=C, S(+2)=U, T(+2)=V, E(+2)=G, R(+2)=T. Applying this to LABOUR: L(+2)=N, A(+2)=C, B(+2)=D, O(+2)=Q, U(+2)=W, R(+2)=T. So, NCDQWT."
+                    },
+                    {
+                        question: "Five friends A, B, C, D, E are sitting in a row facing North. B is sitting between A and C. D is immediately to the right of C. E is at the extreme left. Who is sitting in the middle?",
+                        options: ["A", "B", "C", "D"],
+                        answer: "B",
+                        rationale: "E is at the extreme left. So, E _ _ _ _. D is immediately to the right of C. So, _ _ C D _. B is sitting between A and C. So, A B C. Combining: E A B C D. The middle person is B."
+                    },
+                    {
+                        question: "Find the missing number: 4, 9, 25, 49, ___, 169.",
+                        options: ["81", "100", "121", "144"],
+                        answer: "121",
+                        rationale: "The series consists of squares of prime numbers: 2²=4, 3²=9, 5²=25, 7²=49. The next prime number after 7 is 11. So, 11²=121. The next prime after 11 is 13, and 13²=169."
+                    },
+                    {
+                        question: "If 'WATER' is coded as 'TXSBQ', how is 'FIRE' coded?",
+                        options: ["CFQB", "EFQC", "DFQB", "CGQB"],
+                        answer: "CFQB",
+                        rationale: "The pattern for WATER to TXSBQ is W(-3)T, A(-3)X, T(-1)S, E(-3)B, R(-1)Q. Applying this to FIRE: F(-3)C, I(-3)F, R(-1)Q, E(-3)B. So, CFQB."
+                    },
+                    {
+                        question: "Pointing to a man in a photo, a woman said, 'His brother's father is the only son of my grandmother.' How is the woman related to the man?",
+                        options: ["Sister", "Mother", "Aunt", "Cousin"],
+                        answer: "Aunt",
+                        rationale: "Let's break it down: 'My grandmother's only son' refers to the woman's father (assuming her mother is her grandmother's daughter) or her uncle. However, for the relationship to be 'Aunt', the 'only son of my grandmother' must be the woman's brother, and this brother is the man's father. So, the man's father is the woman's brother. This makes the woman the man's aunt."
+                    },
+                    {
+                        question: "In a certain code, 'APPLE' is coded as 'BQQMF'. How is 'GRAPE' coded in that same code?",
+                        options: ["HSBQG", "HQBQG", "HSBRH", "HSBRF"],
+                        answer: "HSBRF",
+                        rationale: "The pattern is: A(+1)B, P(+1)Q, P(+1)Q, L(+1)M, E(+1)F. So each letter is incremented by 1. Applying this to GRAPE: G(+1)H, R(+1)S, A(+1)B, P(+1)Q, E(+1)F. So, HSBRF."
+                    },
+                    {
+                        question: "Find the next term in the series: A, C, F, J, O, ___",
+                        options: ["U", "V", "W", "X"],
+                        answer: "U",
+                        rationale: "The pattern of differences between consecutive letters is increasing: A(+2)C, C(+3)F, F(+4)J, J(+5)O. The next difference should be +6. O(+6)=U."
+                    },
+                    {
+                        question: "If 'PEN' is coded as '16514', how is 'BOOK' coded?",
+                        options: ["2151511", "2151512", "2151513", "2151510"],
+                        answer: "2151511",
+                        rationale: "Each letter is replaced by its alphabetical position. P=16, E=5, N=14. So PEN is 16514. Applying this to BOOK: B=2, O=15, O=15, K=11. So, 2151511."
+                    },
+                    {
+                        question: "In a row of 16 girls, when Hema was shifted by two places towards the left, she became 7th from the left end. What was her earlier position from the right end of the row?",
+                        options: ["7th", "8th", "9th", "10th"],
+                        answer: "8th",
+                        rationale: "Hema's new position from left = 7th. Since she shifted 2 places left, her original position from left = 7 + 2 = 9th. Total girls = 16. Hema's original position from right = (Total girls - Hema's original position from left) + 1 = (16 - 9) + 1 = 7 + 1 = 8th."
+                    },
+                    {
+                        question: "Find the odd one out: 12, 25, 37, 49.",
+                        options: ["12", "25", "37", "49"],
+                        answer: "37",
+                        rationale: "The numbers are 12, 25 (5²), 37, 49 (7²). Among these, 37 is the only prime number. The others are composite numbers (12, 25, 49)."
+                    },
+                    {
+                        question: "What comes next in the series: Z, W, S, P, ___",
+                        options: ["L", "M", "N", "O"],
+                        answer: "L",
+                        rationale: "The pattern is decreasing by increasing steps: Z(-3)W, W(-4)S, S(-3)P. No, this is not consistent. Z(-3)W, W(-4)S, S(-3)P. This is -3, -4, -3. The next should be -4. P(-4)=L. So, L is correct."
+                    },
+                    {
+                        question: "If 'TABLE' is written as 'ELBAT', how would 'CHAIR' be written?",
+                        options: ["RIAHC", "HCIRA", "RIHAC", "CAHIR"],
+                        answer: "RIAHC",
+                        rationale: "The word is simply reversed. Applying this to CHAIR results in RIAHC."
+                    },
+                    {
+                        question: "A, B, C, D, E, F are six friends. C is the sister of F. B is the brother of E's husband. D is the father of A and grandfather of F. There are two fathers, three brothers and a single mother in the group. Who is the mother?",
+                        options: ["A", "B", "C", "E"],
+                        answer: "E",
+                        rationale: "D is father of A and grandfather of F. So A is D's child. F is A's child. C is sister of F, so C is also A's child. B is brother of E's husband. This means E is married. There are two fathers (D and E's husband), three brothers. A, B, C, D, E, F. We have D (father), A (child), F (child), C (child). B is brother of A. D is father of A. So D is B's father. D is grandfather of F. A is father of F. So A is D's son. So D is father, A is father. B is brother of A. C is sister of F. F is A's child. C is A's child. So C is A's daughter. E is A's wife. E is mother. Two fathers: D, A. Three brothers: A, B, (E's husband's brother, assuming E's husband is A, then B is A's brother). Single mother: E. This fits. So E is the mother."
+                    },
+                    {
+                        question: "Find the odd one out: Book, Pen, Pencil, Eraser.",
+                        options: ["Book", "Pen", "Pencil", "Eraser"],
+                        answer: "Book",
+                        rationale: "Pen, Pencil, and Eraser are stationery items used for writing or correcting. A Book is something you write in or read, but not a writing instrument itself."
+                    },
+                    {
+                        question: "What comes next in the series: 1, 4, 9, 16, 25, ___?",
+                        options: ["30", "36", "40", "49"],
+                        answer: "36",
+                        rationale: "The series consists of perfect squares: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25. The next number should be 6²=36."
+                    },
+                    {
+                        question: "In a certain code, 'RUST' is written as 'QVRU'. How is 'LIVE' written?",
+                        options: ["KJUFB", "KJUFC", "KJUFD", "KJUFE"],
+                        answer: "KJUFB",
+                        rationale: "The pattern is an alternating shift: first letter -1, second letter +1, third letter -1, fourth letter +1. R(-1)Q, U(+1)V, S(-1)R, T(+1)U. Applying this to LIVE: L(-1)K, I(+1)J, V(-1)U, E(+1)F. So, KJUFB."
+                    },
+                    {
+                        question: "In a family, there are 8 members. A is the father of B. C is the daughter of A. D is the brother of B. E is the wife of A. F is the son of C. G is the brother of F. H is the wife of D. How many male members are there in the family?",
+                        options: ["3", "4", "5", "6"],
+                        answer: "5",
+                        rationale: "Let's identify the genders: A (Male), B (gender not specified, but D is his brother), C (Female), D (Male), E (Female), F (Male), G (Male), H (Female). From 'D is the brother of B', B's gender is not explicitly stated. However, in such puzzles, if a gender allows for an option, it's often implied. If B is male, then the males are A, B, D, F, G (5 males). If B is female, then A, D, F, G (4 males). Given the options, 5 is a plausible answer, implying B is male. So, A, B, D, F, G are the 5 male members."
+                    },
+                    {
+                        question: "Find the odd one out: 1, 8, 27, 36, 125.",
+                        options: ["1", "8", "27", "36", "125"],
+                        answer: "36",
+                        rationale: "The series consists of perfect cubes: 1³=1, 2³=8, 3³=27, 5³=125. However, 36 is a perfect square (6²), not a perfect cube. So, 36 is the odd one out."
+                    },
+                    {
+                        question: "What comes next in the series: 1, 1, 2, 3, 5, 8, ___?",
+                        options: ["11", "12", "13", "14"],
+                        answer: "13",
+                        rationale: "This is the Fibonacci sequence, where each number is the sum of the two preceding ones. 1+1=2, 1+2=3, 2+3=5, 3+5=8. The next term is 5+8=13."
+                    },
+                    {
+                        question: "If 'CRICKET' is coded as 'DSHBLFU', how is 'FOOTBALL' coded?",
+                        options: ["GPPCBBMM", "GPPCBBML", "GPPCBMML", "GPPCBBMM"],
+                        answer: "GPPCBBML",
+                        rationale: "The pattern is C(+1)D, R(+1)S, I(-1)H, C(-1)B, K(+1)L, E(+1)F, T(+1)U. Applying this to FOOTBALL: F(+1)G, O(+1)P, O(-1)N, T(-1)S, B(+1)C, A(+1)B, L(+1)M, L(+1)M. So, GPPCBBML."
+                    }
                 ]
             },
             dsa: {
                 title: "Data Structures & Algorithms",
                 questions: [
-                    { question: "What is the worst-case time complexity of inserting an element into a hash table using chaining for collision resolution?", options: ["O(1)", "O(log n)", "O(n)", "O(n² informants)"], answer: "O(n)", rationale: "In the worst case, all 'n' elements could hash to the same bucket. Resolving this with chaining would create a linked list of 'n' elements. Inserting a new element would require traversing this entire list to add it to the end, resulting in O(n) complexity." },
-                    { question: "In a singly linked list, which operation typically has a time complexity of O(1)?", options: ["Searching for an element by value", "Inserting a node at the end of the list", "Deleting a node from the middle of the list", "Inserting a node at the beginning of the list"], answer: "Inserting a node at the beginning of the list", rationale: "Inserting at the beginning only requires updating the head pointer, which is an O(1) operation." },
-                    { question: "What is the worst-case time complexity for searching an element in a binary search tree (BST)?", options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"], answer: "O(N)", rationale: "In the worst case, a BST can degenerate into a skewed tree (like a linked list), making search time proportional to the number of nodes (N)." },
-                    { question: "Which sorting algorithm has a worst-case time complexity of O(N log N)?", options: ["Bubble Sort", "Insertion Sort", "Quick Sort", "Merge Sort"], answer: "Merge Sort", rationale: "Merge Sort consistently has a worst-case time complexity of O(N log N) because it always divides the array into two halves and merges them." },
-                    { question: "What is a common application of a Queue data structure?", options: ["Function call stack management", "Undo/Redo functionality in an editor", "CPU scheduling (First-Come, First-Served)", "Storing hierarchical data"], answer: "CPU scheduling (First-Come, First-Served)", rationale: "CPU scheduling using a First-Come, First-Served (FCFS) approach is a classic application of a Queue (FIFO)." },
-                    { question: "Which data structure uses a hash function to map keys to values?", options: ["Array", "Linked List", "Hash Table", "Binary Tree"], answer: "Hash Table", rationale: "A Hash Table (or Hash Map) uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found." },
-                    { question: "What is the primary disadvantage of using an array for data storage when the size is frequently changing?", options: ["Slow access time for elements", "Difficulty in random access", "Fixed size and costly resizing operations", "Inefficient memory usage"], answer: "Fixed size and costly resizing operations", rationale: "Arrays have a fixed size. If more space is needed, a new, larger array must be allocated, and all elements copied, which is a costly O(N) operation." },
-                    { question: "Which graph traversal algorithm uses a queue?", options: ["Depth-First Search (DFS)", "Breadth-First Search (BFS)", "Dijkstra's Algorithm", "Prim's Algorithm"], answer: "Breadth-First Search (BFS)", rationale: "BFS explores all the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level, which is achieved using a queue." },
-                    { question: "What is the maximum number of children a node can have in a binary tree?", options: ["1", "2", "Any number", "N (number of nodes)"], answer: "2", rationale: "A binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child." },
-                    { question: "Which data structure is suitable for representing relationships between entities, such as social networks or road maps?", options: ["Array", "Stack", "Graph", "Linked List"], answer: "Graph", rationale: "A Graph consists of nodes (vertices) and edges, making it ideal for representing relationships and connections between various entities." },
-                    { question: "What is the time complexity of accessing an element by its index in an array?", options: ["O(N)", "O(log N)", "O(1)", "O(N log N)"], answer: "O(1)", rationale: "Accessing an element by its index in an array is an O(1) operation because the memory address can be directly calculated." },
-                    { question: "Which data structure allows for efficient insertion and deletion at both ends?", options: ["Singly Linked List", "Doubly Linked List", "Array", "Stack"], answer: "Doubly Linked List", rationale: "A Doubly Linked List has pointers to both the next and previous nodes, allowing O(1) insertion and deletion at both the head and tail (if tail pointer is maintained)." },
-                    { question: "What is the primary benefit of using a hash table over a binary search tree for searching?", options: ["Guaranteed O(log N) worst-case search time", "Better memory efficiency", "Faster average-case search time (O(1))", "Maintains sorted order of elements"], answer: "Faster average-case search time (O(1))", rationale: "Hash tables offer O(1) average-case search, insertion, and deletion time, which is generally faster than BSTs (O(log N) average-case)." },
-                    { question: "Which of the following is NOT a common method for handling collisions in hash tables?", options: ["Separate Chaining", "Open Addressing (Linear Probing, Quadratic Probing, Double Hashing)", "Rehashing", "Coalesced Hashing"], answer: "Rehashing", rationale: "Rehashing is a technique used to resize the hash table when it becomes too full, not a direct collision resolution method for individual collisions." },
-                    { question: "What is the space complexity of an array of N integers?", options: ["O(1)", "O(log N)", "O(N)", "O(N^2)"], answer: "O(N)", rationale: "An array of N integers requires space proportional to N, hence O(N) space complexity." },
-                    { question: "Which data structure is typically used to implement a priority queue?", options: ["Array", "Linked List", "Heap", "Stack"], answer: "Heap", rationale: "A Heap (specifically a binary heap) is the most common and efficient data structure for implementing a priority queue, as it allows O(log N) insertion and deletion of the maximum/minimum element." },
-                    { question: "What is the main difference between a complete binary tree and a full binary tree?", options: ["A complete binary tree has all leaves at the same level, while a full binary tree does not.", "A complete binary tree has every node with either 0 or 2 children, while a full binary tree can have 1 child.", "A complete binary tree is filled level by level from left to right, except possibly the last level, while a full binary tree has every node with 0 or 2 children.", "There is no difference; the terms are interchangeable."], answer: "A complete binary tree is filled level by level from left to right, except possibly the last level, while a full binary tree has every node with 0 or 2 children.", rationale: "This accurately defines both. A full binary tree has every node with either 0 or 2 children. A complete binary tree is a binary tree in which all the levels are completely filled except possibly the last level, and the last level has all its nodes as left as possible." },
-                    { question: "Which searching algorithm is most efficient for a sorted array?", options: ["Linear Search", "Binary Search", "Hash Search", "Depth-First Search"], answer: "Binary Search", rationale: "Binary Search is highly efficient for sorted arrays, dividing the search space in half with each comparison, resulting in O(log N) time complexity." },
-                    { question: "What is the primary advantage of a circular linked list over a singly linked list?", options: ["Faster random access to elements", "Easier implementation of LIFO behavior", "Ability to traverse the entire list from any node", "More efficient memory usage"], answer: "Ability to traverse the entire list from any node", rationale: "In a circular linked list, you can start from any node and traverse the entire list, eventually returning to the starting node. This is not easily possible in a singly linked list without a reference to the head." },
-                    { question: "Which data structure is used to implement recursion?", options: ["Queue", "Heap", "Stack", "Hash Table"], answer: "Stack", rationale: "Recursion is inherently implemented using a call stack (a stack data structure) to manage function calls and their local variables." },
-                    { question: "What is the time complexity for inserting an element into a sorted array?", options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"], answer: "O(N)", rationale: "To insert an element into a sorted array while maintaining sorted order, elements after the insertion point must be shifted, which takes O(N) time in the worst case." },
-                    { question: "Which type of tree ensures that for every node, the height of its left and right subtrees differ by at most 1?", options: ["Binary Search Tree (BST)", "Complete Binary Tree", "AVL Tree", "Red-Black Tree"], answer: "AVL Tree", rationale: "An AVL Tree is a self-balancing binary search tree where the difference between heights of left and right subtrees cannot be more than one for all nodes." },
-                    { question: "What is the primary purpose of an adjacency matrix in graph representation?", options: ["To list all nodes and their properties", "To store the edges of a graph as a list of pairs", "To represent which pairs of vertices are adjacent (connected by an edge)", "To keep track of visited nodes during traversal"], answer: "To represent which pairs of vertices are adjacent (connected by an edge)", rationale: "An adjacency matrix is a square matrix used to represent a finite graph. The elements of the matrix indicate whether pairs of vertices are adjacent or not." },
-                    { question: "Which of the following sorting algorithms is an in-place algorithm?", options: ["Merge Sort", "Heap Sort", "Radix Sort", "Counting Sort"], answer: "Heap Sort", rationale: "Heap Sort is an in-place sorting algorithm, meaning it requires only a constant amount of additional memory space (O(1))." },
-                    { question: "What is the main advantage of using a doubly linked list over a singly linked list?", options: ["Reduced memory usage", "Faster searching", "Ability to traverse backward", "Simpler implementation"], answer: "Ability to traverse backward", rationale: "The primary advantage of a doubly linked list is the ability to traverse the list in both forward and backward directions due to the 'previous' pointer." },
-                    { question: "Which data structure is used to implement a compiler's symbol table?", options: ["Queue", "Stack", "Hash Table", "Binary Tree"], answer: "Hash Table", rationale: "Hash tables are commonly used for symbol tables in compilers due to their efficient O(1) average-case lookup, insertion, and deletion of symbols (keys) and their associated information (values)." },
-                    { question: "What is the time complexity of deleting an element from a hash table in the average case?", options: ["O(N)", "O(log N)", "O(1)", "O(N log N)"], answer: "O(1)", rationale: "In the average case, with a good hash function and proper collision resolution, deleting an element from a hash table takes O(1) time." },
-                    { question: "In a graph, what is the difference between an undirected graph and a directed graph?", options: ["Undirected graphs have weights on edges, while directed graphs do not.", "Directed graphs can have cycles, while undirected graphs cannot.", "In an undirected graph, edges have no specific direction, while in a directed graph, edges have a direction.", "Undirected graphs are always connected, while directed graphs can be disconnected."], answer: "In an undirected graph, edges have no specific direction, while in a directed graph, edges have a direction.", rationale: "In an undirected graph, edges represent a two-way connection, while in a directed graph, edges represent a one-way connection from one vertex to another." },
-                    { question: "Which tree traversal method visits the left subtree, then the root, then the right subtree?", options: ["Pre-order traversal", "In-order traversal", "Post-order traversal", "Level-order traversal"], answer: "In-order traversal", rationale: "In-order traversal visits the left subtree, then the root node, and then the right subtree. For a Binary Search Tree, this results in elements being visited in sorted order." },
-                    { question: "What is the time complexity of inserting an element into a balanced binary search tree (e.g., AVL or Red-Black Tree)?", options: ["O(N)", "O(1)", "O(log N)", "O(N log N)"], answer: "O(log N)", rationale: "Inserting into a balanced BST involves searching for the insertion point and then potentially performing rotations to maintain balance, all of which take O(log N) time." }
+                    {
+                        question: "What is the output of the following Python code snippet?",
+                        code: `
+def find_min(arr):
+    if not arr:
+        return None
+    min_val = arr[0]
+    for x in arr:
+        if x < min_val:
+            min_val = x
+    return min_val
+
+print(find_min([7, 1, 5, 9, 2, 3, 4]))
+                        `,
+                        options: ["7", "1", "None", "2"],
+                        answer: "1",
+                        rationale: "The `find_min` function iterates through the array and keeps track of the minimum value encountered. For `[7, 1, 5, 9, 2, 3, 4]`, it will correctly identify 1 as the minimum."
+                    },
+                    {
+                        question: "Which of the following Java code snippets correctly implements a basic Queue's `enqueue` operation (adding an element to the rear)? Assume `rear` is an integer index, `MAX_SIZE` is the capacity, and `arr` is the underlying array.",
+                        code: `
+// Option A
+void enqueue(int val) {
+    if (rear < MAX_SIZE) {
+        arr[rear++] = val;
+    } else {
+        // Queue full
+    }
+}
+
+// Option B
+void enqueue(int val) {
+    if (rear < MAX_SIZE - 1) {
+        arr[rear] = val;
+        rear++;
+    } else {
+        // Queue full
+    }
+}
+
+// Option C
+void enqueue(int val) {
+    if (rear < MAX_SIZE) {
+        arr[++rear] = val;
+    } else {
+        // Queue full
+    }
+}
+
+// Option D
+void enqueue(int val) {
+    if (rear < MAX_SIZE) {
+        rear++;
+        arr[rear] = val;
+    } else {
+        // Queue full
+    }
+}
+                        `,
+                        options: ["Option A", "Option B", "Option C", "Option D"],
+                        answer: "Option A",
+                        rationale: "In a typical array-based queue implementation where `rear` points to the next available position, you first assign the value to `arr[rear]` and then increment `rear`. Option A correctly does this. Options B, C, and D have potential off-by-one errors or incorrect order of operations depending on the initial state of `rear`."
+                    },
+                    {
+                        question: "What is the time complexity of searching for an element in an unsorted linked list?",
+                        options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
+                        answer: "O(N)",
+                        rationale: "In an unsorted linked list, to find an element, you might have to traverse the entire list in the worst case, making the time complexity O(N)."
+                    },
+                    {
+                        question: "Which of the following sorting algorithms has the best worst-case time complexity?",
+                        options: ["Bubble Sort", "Quick Sort", "Merge Sort", "Insertion Sort"],
+                        answer: "Merge Sort",
+                        rationale: "Merge Sort consistently has a worst-case time complexity of O(N log N). Bubble Sort and Insertion Sort are O(N^2). Quick Sort's worst-case is also O(N^2), though its average-case is O(N log N)."
+                    },
+                    {
+                        question: "What is the output of the following C++ code snippet?",
+                        code: `
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main() {
+    std::vector<int> v = {10, 20, 30, 40, 50};
+    v.erase(v.begin() + 2); // Erase element at index 2
+    for (int x : v) {
+        std::cout << x << " ";
+    }
+    return 0;
+}
+                        `,
+                        options: ["10 20 30 40 50", "10 20 40 50", "20 30 40 50", "10 30 40 50"],
+                        answer: "10 20 40 50",
+                        rationale: "The `v.erase(v.begin() + 2)` statement removes the element at index 2 (which is 30). The remaining elements are 10, 20, 40, 50."
+                    },
+                    {
+                        question: "Which data structure is most suitable for implementing a 'undo' mechanism in a text editor?",
+                        options: ["Queue", "Hash Table", "Stack", "Binary Tree"],
+                        answer: "Stack",
+                        rationale: "A Stack is ideal for an undo mechanism because operations are undone in the reverse order they were performed (LIFO - Last-In, First-Out). Each state change can be pushed onto the stack, and popping reverts to the previous state."
+                    },
+                    {
+                        question: "What is the time complexity of inserting a node into a Binary Search Tree (BST) in the average case?",
+                        options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
+                        answer: "O(log N)",
+                        rationale: "In an average-case (balanced) BST, inserting a node involves traversing down the tree to find the correct position, which takes time proportional to the height of the tree, or O(log N)."
+                    },
+                    {
+                        question: "Consider a graph represented by an adjacency matrix. What is the time complexity to check if an edge exists between two specific vertices, V1 and V2?",
+                        options: ["O(1)", "O(V)", "O(E)", "O(V + E)"],
+                        answer: "O(1)",
+                        rationale: "In an adjacency matrix, checking for an edge between V1 and V2 simply involves looking up the value at `matrix[V1][V2]`, which is an O(1) operation."
+                    },
+                    {
+                        question: "What is the output of the following JavaScript code?",
+                        code: `
+let map = new Map();
+map.set('a', 1);
+map.set('b', 2);
+map.set('a', 3);
+console.log(map.get('a'));
+                        `,
+                        options: ["1", "2", "3", "undefined"],
+                        answer: "3",
+                        rationale: "When a key is already present in a Map and `set()` is called with the same key, the existing value associated with that key is updated. So, 'a' is first set to 1, then updated to 3. `map.get('a')` returns 3."
+                    },
+                    {
+                        question: "Which data structure is used to implement Dijkstra's shortest path algorithm?",
+                        options: ["Queue", "Stack", "Min-Heap (Priority Queue)", "Hash Table"],
+                        answer: "Min-Heap (Priority Queue)",
+                        rationale: "Dijkstra's algorithm efficiently finds the shortest paths from a single source to all other vertices in a graph with non-negative edge weights. It uses a Min-Heap (or Priority Queue) to extract the vertex with the smallest distance value efficiently."
+                    },
+                    {
+                        question: "What is the time complexity of deleting the maximum element from a Max-Heap?",
+                        options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
+                        answer: "O(log N)",
+                        rationale: "Deleting the maximum element (root) from a Max-Heap involves replacing it with the last element, then 'heapifying' down to restore the heap property. Both these steps take O(log N) time, where N is the number of elements."
+                    },
+                    {
+                        question: "Which of the following is a characteristic of a balanced binary search tree?",
+                        options: [
+                            "All leaf nodes are at the same level.",
+                            "The difference in height between the left and right subtrees of any node is at most 1.",
+                            "Every node has exactly two children.",
+                            "Elements are stored in a random order."
+                        ],
+                        answer: "The difference in height between the left and right subtrees of any node is at most 1.",
+                        rationale: "This is the defining characteristic of an AVL tree, a type of self-balancing BST. Other balanced BSTs like Red-Black trees have similar properties to maintain logarithmic height, preventing worst-case O(N) operations."
+                    },
+                    {
+                        question: "What is the output of the following C# code snippet?",
+                        code: `
+using System;
+using System.Collections.Generic;
+
+public class Program {
+    public static void Main(string[] args) {
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+        numbers.Insert(2, 99); // Insert 99 at index 2
+        foreach (int num in numbers) {
+            Console.Write(num + " ");
+        }
+    }
+}
+                        `,
+                        options: ["1 2 3 4 5 99", "1 2 99 3 4 5", "99 1 2 3 4 5", "1 99 2 3 4 5"],
+                        answer: "1 2 99 3 4 5",
+                        rationale: "The `Insert(2, 99)` method inserts the value 99 at index 2. This shifts the original elements at and after index 2 to the right. So, the list becomes `[1, 2, 99, 3, 4, 5]`."
+                    },
+                    {
+                        question: "Which data structure is typically used for implementing recursive algorithms to manage function calls?",
+                        options: ["Queue", "Stack", "Heap", "Linked List"],
+                        answer: "Stack",
+                        rationale: "The call stack, which is a Stack data structure, is fundamental to how recursive function calls are managed in memory. Each function call pushes a new frame onto the stack, and popping occurs when a function returns."
+                    },
+                    {
+                        question: "What is the space complexity of Depth-First Search (DFS) on a graph represented by an adjacency list, in the worst case?",
+                        options: ["O(V)", "O(E)", "O(V + E)", "O(V^2)"],
+                        answer: "O(V)",
+                        rationale: "In the worst case, DFS might visit all vertices and put them on the recursion stack (or explicit stack) before backtracking. The maximum depth of the recursion stack can be O(V), where V is the number of vertices."
+                    },
+                    {
+                        question: "Which of the following is true about a complete binary tree?",
+                        options: [
+                            "All leaf nodes are at the same level.",
+                            "Every node has either zero or two children.",
+                            "All levels are completely filled, except possibly the last level, which is filled from left to right.",
+                            "It is always a Binary Search Tree."
+                        ],
+                        answer: "All levels are completely filled, except possibly the last level, which is filled from left to right.",
+                        rationale: "This is the definition of a complete binary tree. Option A describes a perfect binary tree. Option B describes a full binary tree. Option D is false; a complete binary tree does not necessarily have the BST property."
+                    },
+                    {
+                        question: "What is the time complexity of finding an element in a hash table in the worst case?",
+                        options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
+                        answer: "O(N)",
+                        rationale: "In the worst case for a hash table (e.g., all keys hash to the same bucket due to a poor hash function or malicious input), searching can degenerate to O(N) as it might require traversing a linked list of all N elements in that bucket."
+                    },
+                    {
+                        question: "Which data structure is suitable for representing a hierarchical relationship, like a file system or an organizational chart?",
+                        options: ["Graph", "Linked List", "Tree", "Queue"],
+                        answer: "Tree",
+                        rationale: "A Tree data structure is inherently hierarchical, with a root node and child nodes, making it perfect for representing file systems, organizational charts, XML/JSON documents, etc."
+                    },
+                    {
+                        question: "What is the output of the following Python code?",
+                        code: `
+my_list = [1, 2, 3, 4, 5]
+my_list.pop(2)
+my_list.append(6)
+print(my_list)
+                        `,
+                        options: ["[1, 2, 4, 5, 6]", "[1, 2, 3, 4, 5, 6]", "[1, 2, 4, 6]", "[1, 2, 5, 6]"],
+                        answer: "[1, 2, 4, 5, 6]",
+                        rationale: "`my_list.pop(2)` removes the element at index 2 (which is 3). The list becomes `[1, 2, 4, 5]`. Then `my_list.append(6)` adds 6 to the end. The final list is `[1, 2, 4, 5, 6]`."
+                    },
+                    {
+                        question: "Which of the following scenarios is best suited for using a Queue?",
+                        options: [
+                            "Managing browser history (back/forward buttons)",
+                            "Processing tasks in the order they were received",
+                            "Storing elements for quick lookup by key",
+                            "Representing a family tree"
+                        ],
+                        answer: "Processing tasks in the order they were received",
+                        rationale: "A Queue operates on a First-In, First-Out (FIFO) principle, making it ideal for scenarios where items need to be processed in the exact order they arrive, such as print job queues, CPU task scheduling, or message queues."
+                    },
+                    {
+                        question: "What is the time complexity of merging two sorted arrays of size M and N into a single sorted array?",
+                        options: ["O(M + N)", "O(M * N)", "O(log(M+N))", "O((M+N) log (M+N))"],
+                        answer: "O(M + N)",
+                        rationale: "Merging two already sorted arrays requires a single pass through both arrays, comparing elements and adding them to a new array. This takes linear time proportional to the sum of their sizes, O(M + N)."
+                    },
+                    {
+                        question: "Which data structure is used to implement a recursive function's call stack?",
+                        options: ["Heap", "Queue", "Stack", "Hash Map"],
+                        answer: "Stack",
+                        rationale: "The operating system uses a Stack (specifically, the call stack) to manage function calls, including recursive ones. Each time a function is called, a new stack frame is pushed, and when it returns, the frame is popped."
+                    },
+                    {
+                        question: "What is the main difference between an array and a linked list in terms of memory allocation?",
+                        options: [
+                            "Arrays store elements randomly, linked lists store them contiguously.",
+                            "Arrays allocate contiguous memory, linked lists allocate scattered memory.",
+                            "Arrays are dynamic in size, linked lists are fixed in size.",
+                            "Arrays use pointers, linked lists use indices."
+                        ],
+                        answer: "Arrays allocate contiguous memory, linked lists allocate scattered memory.",
+                        rationale: "Arrays store elements in contiguous memory locations, allowing direct access by index. Linked lists store elements (nodes) at potentially scattered memory locations, with each node containing a pointer to the next (and/or previous) node."
+                    },
+                    {
+                        question: "Which traversal method for a binary tree visits the root node first, then the left subtree, and then the right subtree?",
+                        options: ["In-order", "Pre-order", "Post-order", "Level-order"],
+                        answer: "Pre-order",
+                        rationale: "Pre-order traversal follows the Root-Left-Right sequence. In-order is Left-Root-Right, and Post-order is Left-Right-Root."
+                    },
+                    {
+                        question: "What is the time complexity of inserting an element at the beginning of an array (assuming it's not full and elements need to be shifted)?",
+                        options: ["O(1)", "O(log N)", "O(N)", "O(N log N)"],
+                        answer: "O(N)",
+                        rationale: "Inserting at the beginning of an array requires shifting all existing N elements one position to the right to make space for the new element, resulting in O(N) time complexity."
+                    },
+                    {
+                        question: "Which data structure is best for implementing a symbol table in a compiler?",
+                        options: ["Linked List", "Stack", "Hash Table", "Queue"],
+                        answer: "Hash Table",
+                        rationale: "Hash tables are widely used for symbol tables in compilers because they offer highly efficient (average O(1)) lookup, insertion, and deletion of symbols, which are critical operations during compilation."
+                    },
+                    {
+                        question: "What is the main advantage of an Adjacency List representation over an Adjacency Matrix for a sparse graph?",
+                        options: [
+                            "Faster edge lookup",
+                            "Less memory consumption",
+                            "Simpler implementation",
+                            "Better for dense graphs"
+                        ],
+                        answer: "Less memory consumption",
+                        rationale: "For a sparse graph (few edges), an adjacency list uses O(V + E) space, which is much less than the O(V^2) space required by an adjacency matrix. An adjacency matrix is better for dense graphs or when frequent edge lookups are needed."
+                    },
+                    {
+                        question: "In a min-heap, what is the property that holds true for every node?",
+                        options: [
+                            "The value of a node is greater than or equal to the value of its children.",
+                            "The value of a node is less than or equal to the value of its children.",
+                            "The value of a node is always greater than its parent.",
+                            "The value of a node is always less than its parent."
+                        ],
+                        answer: "The value of a node is less than or equal to the value of its children.",
+                        rationale: "In a min-heap, the value of each node is less than or equal to the values of its children. This ensures that the smallest element is always at the root."
+                    },
+                    {
+                        question: "What is the time complexity of performing a `find` operation in a Disjoint Set Union (DSU) data structure with path compression?",
+                        options: ["O(1)", "O(log N)", "O(α(N))", "O(N)"],
+                        answer: "O(α(N))",
+                        rationale: "With path compression (and union by rank/size), the amortized time complexity for DSU operations (Find and Union) is O(α(N)), where α is the inverse Ackermann function, which grows extremely slowly and is practically a constant for all realistic input sizes."
+                    },
+                    {
+                        question: "Which sorting algorithm is a comparison sort that is stable and has a time complexity of O(N log N)?",
+                        options: ["Quick Sort", "Heap Sort", "Merge Sort", "Insertion Sort"],
+                        answer: "Merge Sort",
+                        rationale: "Merge Sort is a stable, comparison-based sorting algorithm with a consistent O(N log N) time complexity in all cases (best, average, and worst). Quick Sort and Heap Sort are generally not stable. Insertion Sort is stable but O(N^2) worst-case."
+                    },
+                    {
+                        question: "What is the primary use case for a Trie (Prefix Tree) data structure?",
+                        options: [
+                            "Efficiently storing and retrieving key-value pairs.",
+                            "Implementing a LIFO structure.",
+                            "Autocompletion and spell checking.",
+                            "Managing tasks based on priority."
+                        ],
+                        answer: "Autocompletion and spell checking.",
+                        rationale: "A Trie is specifically designed for efficient retrieval of keys in a dataset where keys are strings. Its structure allows for very fast prefix matching, making it ideal for applications like autocompletion, spell checking, and IP routing."
+                    }
                 ]
             },
             english: {
                 title: "English Usage",
                 questions: [
-                    { question: "Choose the word that is most nearly OPPOSITE in meaning to the word 'PERSPICACIOUS'.", options: ["Astute", "Dull", "Sagacious", "Discerning"], answer: "Dull", rationale: "Perspicacious means having a ready insight into and understanding of things (i.e., mentally sharp). The opposite is dull, meaning slow to understand." },
-                    { question: "Select the word that best completes the sentence: 'The detective found the witness's account to be too ______ to be credible, as it contradicted several known facts.'", options: ["Coherent", "Plausible", "Incongruous", "Verifiable"], answer: "Incongruous", rationale: "Incongruous means not in harmony or keeping with the surroundings or other aspects of something. An incongruous account would contradict known facts and thus not be credible." },
-                    { question: "Which pair of words has a relationship most similar to the relationship between 'Arid : Desert'?", options: ["Fertile : Farm", "Humid : Swamp", "Cold : Glacier", "Dense : Forest"], answer: "Humid : Swamp", rationale: "Humid describes a swamp, and a swamp is inherently humid, similar to how a desert is inherently arid. This is the closest analogy." },
-                    { question: "Choose the word that is the best synonym for 'Ubiquitous'.", options: ["Scarce", "Rare", "Omnipresent", "Limited"], answer: "Omnipresent", rationale: "Omnipresent means present everywhere at the same time, which is a direct synonym for ubiquitous." },
-                    { question: "Which of the following words is most likely to describe a person who is 'gregarious'?", options: ["Solitary", "Reserved", "Sociable", "Aloof"], answer: "Sociable", rationale: "Gregarious means fond of company; sociable. This is the best description." },
-                    { question: "Identify the sentence with the correct subject-verb agreement:", options: ["Neither the students nor the professor are ready for the presentation.", "The committee, despite its diverse opinions, have decided on a unified approach.", "Each of the participants, along with their mentor, is required to submit a report.", "The data collected from various sources were inconsistent."], answer: "Each of the participants, along with their mentor, is required to submit a report.", rationale: "The true subject is 'Each', which is singular, so the verb 'is' is correct. The phrase 'along with their mentor' is parenthetical and does not affect the verb agreement." },
-                    { question: "Choose the sentence that demonstrates correct pronoun agreement:", options: ["Every student should bring their own laptop to the workshop.", "Neither of the sisters remembered their mother's birthday.", "The team celebrated its victory with great enthusiasm.", "If anyone calls, tell them I'll be back shortly."], answer: "The team celebrated its victory with great enthusiasm.", rationale: "When a collective noun like 'team' acts as a single unit, it takes a singular pronoun ('its'). This sentence is correct." },
-                    { question: "Which sentence exhibits correct parallel structure?", options: ["She enjoys hiking, to swim, and cycling.", "He was praised for his dedication, his honesty, and because he was always punctual.", "The new policy aims to reduce waste, to conserve energy, and to promote sustainability.", "Learning a new language involves memorizing vocabulary, understanding grammar rules, and practice speaking."], answer: "The new policy aims to reduce waste, to conserve energy, and to promote sustainability.", rationale: "All elements are infinitives ('to reduce', 'to conserve', 'to promote'), demonstrating correct parallel structure." },
-                    { question: "Identify the sentence with a dangling or misplaced modifier:", options: ["Running quickly, the dog chased the ball.", "Having finished the report, the manager approved the project.", "After baking for an hour, I took the cake out of the oven.", "To succeed in life, hard work is essential."], answer: "After baking for an hour, I took the cake out of the oven.", rationale: "The modifier 'After baking for an hour' incorrectly implies that 'I' was baking for an hour, not the cake. This is a dangling modifier." },
-                    { question: "Which of the following sentences uses the conditional tense correctly?", options: ["If I would have known, I would have told you.", "If she studied harder, she would pass the exam.", "If he had arrived earlier, he will meet them.", "Unless you will hurry, you will miss the train."], answer: "If she studied harder, she would pass the exam.", rationale: "This is a correct Type 2 conditional (unreal present/future)." },
-                    { question: "Choose the sentence that correctly uses the subjunctive mood.", options: ["If I was you, I would accept the offer.", "The manager requested that he submits the report by Friday.", "It is imperative that she be present at the meeting.", "I wish she was here to see this."], answer: "It is imperative that she be present at the meeting.", rationale: "After expressions of necessity or importance ('it is imperative that'), the subjunctive 'be' (base form) is used for all subjects. This sentence is correct." },
-                    { question: "Convert the following sentence to passive voice: 'The renowned architect designed the magnificent building.'", options: ["The magnificent building was designed by the renowned architect.", "The renowned architect was designing the magnificent building.", "The magnificent building designed the renowned architect.", "The magnificent building had been designed by the renowned architect."], answer: "The magnificent building was designed by the renowned architect.", rationale: "This correctly transforms the active voice sentence into passive voice, making the object of the active sentence ('the magnificent building') the subject of the passive sentence and using the correct form of 'to be' + past participle." },
-                    { question: "Choose the correct reported speech for: 'He said, 'I will finish the project tomorrow.''", options: ["He said that he will finish the project tomorrow.", "He said that he would finish the project the next day.", "He said that he finished the project tomorrow.", "He said that I would finish the project the next day."], answer: "He said that he would finish the project the next day.", rationale: "This correctly applies the tense shift ('will' to 'would') and the time expression change ('tomorrow' to 'the next day')." },
-                    { question: "Select the sentence that uses prepositions correctly.", options: ["She is good in mathematics.", "He arrived at the airport on time.", "I am interested on learning new languages.", "They discussed about the proposal."], answer: "He arrived at the airport on time.", rationale: "This sentence uses 'at' for a specific location and 'on' for time correctly." },
-                    { question: "Choose the best conjunction to complete the sentence: 'She was exhausted, ______ she continued to work on her thesis.'", options: ["and", "so", "but", "for"], answer: "but", rationale: "But indicates a contrast or contradiction, which fits the meaning that despite being exhausted, she continued to work." },
-                    { question: "What does the idiom 'to bite the bullet' mean?", options: ["To express anger loudly.", "To make a quick decision.", "To face a difficult or unpleasant situation with courage and fortitude.", "To give up easily."], answer: "To face a difficult or unpleasant situation with courage and fortitude.", rationale: "This is the correct meaning of the idiom, originating from soldiers biting bullets during surgery to manage pain." },
-                    { question: "Which sentence uses the idiom 'spill the beans' correctly?", options: ["He accidentally spilled the beans all over the kitchen floor.", "The chef asked him to spill the beans into the pot.", "She promised not to spill the beans about the surprise party.", "The gardener decided to spill the beans near the rose bushes."], answer: "She promised not to spill the beans about the surprise party.", rationale: "This correctly uses the idiom to mean revealing a secret or confidential information." },
-                    { question: "Which of the following sentences uses an idiom INCORRECTLY?", options: ["It's raining cats and dogs, so we should stay indoors.", "He felt under the weather after eating too much.", "She decided to break a leg before her performance.", "The new project is a piece of cake for the experienced team."], answer: "She decided to break a leg before her performance.", rationale: "This is incorrect. 'Break a leg' means 'good luck', not to literally break one's leg. The idiom is used as an encouragement before a performance, so saying 'she decided to break a leg' implies a literal action, which is wrong in context." },
-                    { question: "Choose the idiom that best completes the sentence: 'Despite the initial setbacks, the team managed to ______ and win the championship.'", options: ["throw in the towel", "pull out all the stops", "beat around the bush", "hit the road"], answer: "pull out all the stops", rationale: "To pull out all the stops means to make a maximum effort, which fits the context of overcoming setbacks to win." },
-                    { question: "What is the meaning of the idiom 'to burn the midnight oil'?", options: ["To waste time late at night.", "To stay up late working or studying.", "To set something on fire at night.", "To finish work early in the morning."], answer: "To stay up late working or studying.", rationale: "This idiom refers to working or studying late into the night, often by artificial light (like an oil lamp)." },
-                    { question: "Identify the grammatical error in the following sentence: 'The reason why he left was because he felt undervalued.'", options: ["Incorrect use of 'why'", "Redundancy of 'reason why' and 'because'", "Misplaced modifier", "Subject-verb agreement error"], answer: "Redundancy of 'reason why' and 'because'", rationale: "The phrase 'The reason why... was because' is redundant. It should be either 'The reason he left was that he felt undervalued' or 'He left because he felt undervalued'." },
-                    { question: "Choose the sentence that is most clear and concise:", options: ["Despite the fact that he was tired, he continued to work.", "Although he was tired, he continued to work.", "He continued to work, even though he was feeling tired.", "Due to the fact of his tiredness, he continued to work."], answer: "Although he was tired, he continued to work.", rationale: "This is clear and concise, using 'Although' to express the contrast effectively." },
-                    { question: "Select the sentence that is grammatically correct and stylistically strong.", options: ["The new software, which was developed by a team of experts, it offers advanced features.", "Having developed by a team of experts, the new software offers advanced features.", "Developed by a team of experts, the new software offers advanced features.", "The new software offers advanced features, being developed by a team of experts."], answer: "Developed by a team of experts, the new software offers advanced features.", rationale: "This sentence is grammatically correct, concise, and stylistically strong, using a past participle phrase to modify 'the new software'." },
-                    { question: "Which sentence is free of redundancy?", options: ["The final outcome was ultimately decided by the committee.", "He repeated the same mistake again.", "She reverted back to her old habits.", "The consensus among the group was clear."], answer: "The consensus among the group was clear.", rationale: "Consensus implies agreement among a group, but 'among the group' clarifies which group, and the sentence is not redundant." },
-                    { question: "Choose the sentence with correct parallel structure and no grammatical errors.", options: ["The manager advised the employees to work diligently, to communicate effectively, and being punctual.", "He is known for his intelligence, his wit, and for being extremely kind.", "Her goals include completing her degree, securing a good job, and traveling the world.", "The new system is both efficient and it is also user-friendly."], answer: "Her goals include completing her degree, securing a good job, and traveling the world.", rationale: "All elements are gerund phrases ('completing her degree', 'securing a good job', 'traveling the world'), demonstrating correct parallel structure." },
-                    { question: "Passage: 'Despite the pervasive influence of digital media, the tactile experience of reading a physical book continues to appeal to many. The rustle of pages and the scent of paper offer a sensory engagement that digital screens cannot replicate.' What can be inferred about the author's perspective on physical books?", options: ["The author believes physical books are superior to digital media in all aspects.", "The author suggests that digital media has completely replaced physical books.", "The author appreciates the unique sensory qualities of physical books.", "The author is critical of the advancements in digital reading technology."], answer: "The author appreciates the unique sensory qualities of physical books.", rationale: "The passage explicitly mentions 'tactile experience', 'rustle of pages', and 'scent of paper' as appealing sensory engagements, indicating the author's appreciation." },
-                    { question: "Passage: 'The recent surge in renewable energy adoption signals a global commitment to mitigating climate change. However, challenges remain in grid integration and energy storage, which are crucial for a complete transition.' What is the main idea of this passage?", options: ["Renewable energy has completely solved the problem of climate change.", "The world has fully transitioned to renewable energy.", "While renewable energy adoption is growing, significant hurdles in integration and storage persist.", "Climate change mitigation is no longer a concern due to renewable energy."], answer: "While renewable energy adoption is growing, significant hurdles in integration and storage persist.", rationale: "This accurately summarizes both the positive trend in adoption and the remaining challenges." },
-                    { question: "Passage: 'The incessant chirping of crickets permeated the otherwise tranquil summer night, a constant, irritating reminder of the oppressive humidity. One could only wish for a sudden, torrential downpour to silence the nocturnal orchestra.' What is the author's tone towards the crickets?", options: ["Appreciative", "Neutral", "Annoyed", "Amused"], answer: "Annoyed", rationale: "Words like 'incessant', 'irritating reminder', and the wish for them to be 'silence' clearly convey annoyance." },
-                    { question: "Passage: 'Many believe that success is solely a result of innate talent. However, countless examples demonstrate that perseverance and diligent practice often outweigh natural ability in achieving mastery.' What is the author's primary argument?", options: ["Innate talent is irrelevant to success.", "Success is a combination of talent and luck.", "Perseverance and practice are more critical for mastery than innate talent.", "Natural ability guarantees success."], answer: "Perseverance and practice are more critical for mastery than innate talent.", rationale: "The author directly states that 'perseverance and diligent practice often outweigh natural ability in achieving mastery'." },
-                    { question: "Passage: 'The advent of artificial intelligence promises to revolutionize various industries, from healthcare to finance. While concerns about job displacement are valid, the potential for AI to enhance human capabilities and solve complex problems is immense.' Based on the passage, what is the author's overall outlook on artificial intelligence?", options: ["Skeptical and fearful of job displacement.", "Unreservedly optimistic about its immediate benefits.", "Balanced, acknowledging both challenges and significant potential.", "Pessimistic about its long-term impact on society."], answer: "Balanced, acknowledging both challenges and significant potential.", rationale: "The passage presents both the 'valid' concerns and the 'immense' potential, indicating a balanced perspective." }
+                    {
+                        question: "Choose the word that is most nearly **opposite** in meaning to **'Benevolent'**.",
+                        options: ["Kind", "Generous", "Malicious", "Compassionate"],
+                        answer: "Malicious",
+                        rationale: "Benevolent means well-meaning and kindly. Malicious means intending or intended to do harm, making it the direct opposite."
+                    },
+                    {
+                        question: "Select the word that best completes the sentence: 'The ancient ruins were remarkably well-preserved, a testament to the ______ craftsmanship of the civilization.'",
+                        options: ["Mediocre", "Flawed", "Exceptional", "Rudimentary"],
+                        answer: "Exceptional",
+                        rationale: "The preservation implies high quality. Exceptional means unusually good; outstanding. Mediocre, flawed, and rudimentary suggest poor quality."
+                    },
+                    {
+                        question: "Which pair of words has a relationship most similar to the relationship between **'Scalpel : Surgeon'**?",
+                        options: ["Microscope : Biologist", "Hammer : Carpenter", "Pen : Author", "Keyboard : Typist"],
+                        answer: "Hammer : Carpenter",
+                        rationale: "A scalpel is a primary tool used by a surgeon for their craft. Similarly, a hammer is a primary tool used by a carpenter for their craft."
+                    },
+                    {
+                        question: "Choose the word that is the best **synonym** for **'Profound'**.",
+                        options: ["Superficial", "Shallow", "Deep", "Trivial"],
+                        answer: "Deep",
+                        rationale: "Profound means (of a state, quality, or emotion) very great or intense; (of a person or statement) having or showing great knowledge or insight. Deep is the closest synonym."
+                    },
+                    {
+                        question: "Which of the following words is most likely to describe a person who is **'meticulous'**?",
+                        options: ["Careless", "Precise", "Hasty", "Disorganized"],
+                        answer: "Precise",
+                        rationale: "Meticulous means showing great attention to detail; very careful and precise. Precise is the best description."
+                    },
+                    {
+                        question: "Identify the sentence with the correct subject-verb agreement:",
+                        options: [
+                            "The team of researchers are conducting a new experiment.",
+                            "Neither the manager nor the employees is happy with the decision.",
+                            "Every one of the books on the shelf is dusty.",
+                            "The news, despite its gravity, were not widely reported."
+                        ],
+                        answer: "Every one of the books on the shelf is dusty.",
+                        rationale: "The subject is 'Every one', which is singular, so the verb 'is' is correct. 'Team' (collective noun) usually takes singular verb. With 'neither...nor', the verb agrees with the closest subject ('employees' is plural, so 'are'). 'News' is singular, so 'was'."
+                    },
+                    {
+                        question: "Choose the sentence that demonstrates correct pronoun agreement:",
+                        options: [
+                            "Each of the students brought their own lunch.",
+                            "Anyone who wants to succeed must work hard for themself.",
+                            "The company announced its new policy to their employees.",
+                            "Neither John nor Mary submitted his or her application on time."
+                        ],
+                        answer: "Neither John nor Mary submitted his or her application on time.",
+                        rationale: "When 'neither...nor' connects two singular subjects, a singular pronoun is used. 'His or her' correctly covers both genders. Options A and B use plural pronouns with singular antecedents. Option C uses 'their' (plural) with 'company' (singular collective noun acting as a unit)."
+                    },
+                    {
+                        question: "Which sentence exhibits correct parallel structure?",
+                        options: [
+                            "She likes to sing, dancing, and to play music.",
+                            "He is responsible for managing the budget, hiring staff, and to train new employees.",
+                            "The job requires strong analytical skills, excellent communication, and the ability to work under pressure.",
+                            "They decided to eat out, to watch a movie, and then going home."
+                        ],
+                        answer: "The job requires strong analytical skills, excellent communication, and the ability to work under pressure.",
+                        rationale: "All elements are noun phrases: 'strong analytical skills', 'excellent communication', 'the ability to work under pressure'. The other options mix grammatical forms (e.g., infinitives with gerunds)."
+                    },
+                    {
+                        question: "Identify the sentence with a dangling or misplaced modifier:",
+                        options: [
+                            "Having finished the marathon, the medal was awarded to the runner.",
+                            "Running quickly, the child caught the ball.",
+                            "To understand the concept, one must read the textbook carefully.",
+                            "After a long day, the soft bed felt inviting."
+                        ],
+                        answer: "Having finished the marathon, the medal was awarded to the runner.",
+                        rationale: "The introductory phrase 'Having finished the marathon' illogically modifies 'the medal', implying the medal finished the marathon. It should modify 'the runner'."
+                    },
+                    {
+                        question: "Which of the following sentences uses the conditional tense correctly?",
+                        options: [
+                            "If I would have studied, I would have passed.",
+                            "If she were here, she would help us.",
+                            "If he had known, he will tell you.",
+                            "Unless it will rain, we will go for a picnic."
+                        ],
+                        answer: "If she were here, she would help us.",
+                        rationale: "This is a correct Type 2 conditional (unreal present/future) using the subjunctive 'were'. Option A is incorrect (should be 'If I had studied'). Option C mixes tenses. Option D uses 'will' in the conditional clause, which is incorrect."
+                    },
+                    {
+                        question: "Choose the sentence that correctly uses the subjunctive mood.",
+                        options: [
+                            "I wish he was taller.",
+                            "It is crucial that she arrives on time.",
+                            "The committee recommended that he be given the award.",
+                            "If I was a bird, I would fly."
+                        ],
+                        answer: "The committee recommended that he be given the award.",
+                        rationale: "After verbs like 'recommend', 'suggest', 'demand', the subjunctive (base form) is used: 'that he be given'. Options A and D should use 'were' for wishes/hypothetical situations. Option B should use 'arrive' (base form)."
+                    },
+                    {
+                        question: "Convert the following sentence to passive voice: 'The students completed the assignment.'",
+                        options: [
+                            "The assignment was completed by the students.",
+                            "The assignment is completed by the students.",
+                            "The students were completing the assignment.",
+                            "The assignment had been completed by the students."
+                        ],
+                        answer: "The assignment was completed by the students.",
+                        rationale: "The active sentence is in simple past. The passive voice equivalent is 'was/were' + past participle. 'The assignment' becomes the subject, and 'was completed' is the verb phrase."
+                    },
+                    {
+                        question: "Choose the correct reported speech for: 'She said, \"I am going to the library now.\"'",
+                        options: [
+                            "She said that she is going to the library now.",
+                            "She said that she was going to the library then.",
+                            "She said that I was going to the library now.",
+                            "She said she went to the library then."
+                        ],
+                        answer: "She said that she was going to the library then.",
+                        rationale: "In reported speech, present continuous ('am going') shifts to past continuous ('was going'), and 'now' shifts to 'then'."
+                    },
+                    {
+                        question: "Select the sentence that uses prepositions correctly.",
+                        options: [
+                            "He is fond of reading books.",
+                            "She is capable to handle the pressure.",
+                            "I agree with the proposal.",
+                            "They waited for him at the bus stop."
+                        ],
+                        answer: "They waited for him at the bus stop.",
+                        rationale: "This sentence correctly uses 'for' after 'waited' and 'at' for a specific location. 'Fond of' is correct. 'Capable of' is correct. 'Agree to' a proposal, or 'agree with' a person."
+                    },
+                    {
+                        question: "Choose the best conjunction to complete the sentence: 'He prepared diligently, ______ he still failed the exam.'",
+                        options: ["and", "so", "but", "for"],
+                        answer: "but",
+                        rationale: "The two clauses present a contrast: diligent preparation versus failure. 'But' is the appropriate conjunction to show this contrast."
+                    },
+                    {
+                        question: "What does the idiom **'to turn a blind eye'** mean?",
+                        options: [
+                            "To ignore something intentionally.",
+                            "To look at something closely.",
+                            "To pretend to be blind.",
+                            "To pay close attention."
+                        ],
+                        answer: "To ignore something intentionally.",
+                        rationale: "To turn a blind eye means to deliberately ignore something that one should notice or deal with, often something wrong."
+                    },
+                    {
+                        question: "Which sentence uses the idiom **'hit the nail on the head'** correctly?",
+                        options: [
+                            "He hit the nail on the head with a hammer.",
+                            "She hit the nail on the head when she described the problem perfectly.",
+                            "The carpenter hit the nail on the head of the table.",
+                            "The artist hit the nail on the head of the canvas."
+                        ],
+                        answer: "She hit the nail on the head when she described the problem perfectly.",
+                        rationale: "The idiom means to describe a situation or problem exactly, or to say or do something exactly right. Option B uses it figuratively and correctly."
+                    },
+                    {
+                        question: "Which of the following sentences uses an idiom **incorrectly**?",
+                        options: [
+                            "He was feeling under the weather, so he stayed home.",
+                            "She passed the exam with flying colors.",
+                            "They decided to pull someone's leg by telling a joke.",
+                            "The new manager hit the road running on his first day."
+                        ],
+                        answer: "The new manager hit the road running on his first day.",
+                        rationale: "'Hit the road' means to leave. 'Hit the ground running' means to start a new activity with great enthusiasm and energy. The sentence incorrectly mixes these two idioms."
+                    },
+                    {
+                        question: "Choose the idiom that best completes the sentence: 'After working tirelessly for weeks, she finally decided to ______ and take a much-needed vacation.'",
+                        options: [
+                            "burn the midnight oil",
+                            "call it a day",
+                            "break a leg",
+                            "bite the bullet"
+                        ],
+                        answer: "call it a day",
+                        rationale: "To 'call it a day' means to stop working on something. This fits the context of deciding to take a break after working tirelessly."
+                    },
+                    {
+                        question: "What is the meaning of the idiom **'to get cold feet'**?",
+                        options: [
+                            "To feel very cold.",
+                            "To become nervous or lose courage.",
+                            "To run away from danger.",
+                            "To be indecisive."
+                        ],
+                        answer: "To become nervous or lose courage.",
+                        rationale: "To get cold feet means to suddenly become too frightened to do something you had planned to do, especially something important like getting married or making a big decision."
+                    },
+                    {
+                        question: "Identify the grammatical error in the following sentence: 'Between you and I, this project is doomed to fail.'",
+                        options: [
+                            "Incorrect pronoun case",
+                            "Subject-verb agreement error",
+                            "Misplaced modifier",
+                            "Redundancy"
+                        ],
+                        answer: "Incorrect pronoun case",
+                        rationale: "'Between' is a preposition, and prepositions take objective case pronouns. Therefore, it should be 'Between you and me'."
+                    },
+                    {
+                        question: "Choose the sentence that is most clear and concise:",
+                        options: [
+                            "In spite of the fact that he was ill, he managed to complete the task.",
+                            "Despite his illness, he completed the task.",
+                            "He completed the task, even though he was suffering from an illness.",
+                            "Due to the fact of his being ill, he completed the task."
+                        ],
+                        answer: "Despite his illness, he completed the task.",
+                        rationale: "This option expresses the idea most directly and with the fewest words, avoiding wordy phrases like 'in spite of the fact that' or 'due to the fact of his being'."
+                    },
+                    {
+                        question: "Select the sentence that is grammatically correct and stylistically strong.",
+                        options: [
+                            "The report, which was written by the intern, it contained several errors.",
+                            "Written by the intern, the report contained several errors.",
+                            "Having been written by the intern, the report, it contained several errors.",
+                            "The report contained several errors, being written by the intern."
+                        ],
+                        answer: "Written by the intern, the report contained several errors.",
+                        rationale: "This sentence uses a concise past participle phrase ('Written by the intern') to modify 'the report' effectively, avoiding redundancy and awkward phrasing present in other options."
+                    },
+                    {
+                        question: "Which sentence is free of redundancy?",
+                        options: [
+                            "He reiterated again his previous statement.",
+                            "The two identical twins looked exactly alike.",
+                            "She collaborated together with her colleagues.",
+                            "The new initiative is highly innovative."
+                        ],
+                        answer: "The new initiative is highly innovative.",
+                        rationale: "This sentence contains no redundant words. 'Reiterated' means to say again. 'Identical' means exactly alike. 'Collaborated' means to work together. All these make the other words redundant."
+                    },
+                    {
+                        question: "Choose the sentence with correct parallel structure and no grammatical errors.",
+                        options: [
+                            "She enjoys reading novels, watching films, and to listen to podcasts.",
+                            "His responsibilities include managing staff, developing strategies, and customer relations.",
+                            "The ideal candidate should be intelligent, hardworking, and possess good communication skills.",
+                            "They decided to visit Paris, to see the Eiffel Tower, and eating French cuisine."
+                        ],
+                        answer: "His responsibilities include managing staff, developing strategies, and customer relations.",
+                        rationale: "All elements are gerund phrases or noun phrases that function similarly: 'managing staff' (gerund phrase), 'developing strategies' (gerund phrase), and 'customer relations' (noun phrase acting as a direct object). Option A mixes gerunds and infinitives. Option C mixes adjectives and a verb phrase. Option D mixes infinitives and a gerund."
+                    },
+                    {
+                        question: "Passage: 'The rapid advancement of artificial intelligence raises profound ethical questions. While AI offers immense potential for societal benefit, concerns about bias in algorithms, privacy, and autonomous decision-making must be addressed proactively.'\n\nWhat is the author's primary concern regarding AI?",
+                        options: [
+                            "Its potential to solve complex problems.",
+                            "The speed of its development.",
+                            "The ethical implications, particularly bias, privacy, and autonomous decisions.",
+                            "Its ability to revolutionize industries."
+                        ],
+                        answer: "The ethical implications, particularly bias, privacy, and autonomous decisions.",
+                        rationale: "The passage explicitly states that AI 'raises profound ethical questions' and then lists specific concerns: 'bias in algorithms, privacy, and autonomous decision-making'. This is the author's primary focus."
+                    },
+                    {
+                        question: "Passage: 'Despite the economic downturn, the company managed to increase its market share. This success can be attributed to its agile response to changing consumer demands and its investment in innovative product development.'\n\nWhat is the main reason for the company's success during the downturn?",
+                        options: [
+                            "The overall economic recovery.",
+                            "Its ability to adapt and innovate.",
+                            "Reduced competition in the market.",
+                            "Government subsidies."
+                        ],
+                        answer: "Its ability to adapt and innovate.",
+                        rationale: "The passage explicitly attributes the success to 'its agile response to changing consumer demands and its investment in innovative product development', which collectively represent adaptability and innovation."
+                    },
+                    {
+                        question: "Passage: 'The ancient city, now a ruin, once thrived as a bustling trade hub. Its strategic location at the crossroads of major trade routes facilitated the exchange of goods and ideas, leading to unparalleled prosperity.'\n\nWhat was the key factor contributing to the ancient city's prosperity?",
+                        options: [
+                            "Its military strength.",
+                            "Its artistic achievements.",
+                            "Its strategic geographical position.",
+                            "Its agricultural output."
+                        ],
+                        answer: "Its strategic geographical position.",
+                        rationale: "The passage states: 'Its strategic location at the crossroads of major trade routes facilitated the exchange of goods and ideas, leading to unparalleled prosperity.' The strategic location is the key factor."
+                    },
+                    {
+                        question: "Passage: 'While traditional classrooms offer structured learning, online education provides unparalleled flexibility. Students can access materials at their own pace, from any location, making it an ideal option for working professionals and those with diverse schedules.'\n\nWhat is the primary advantage of online education highlighted in the passage?",
+                        options: [
+                            "Structured learning environment.",
+                            "Access to a wider range of courses.",
+                            "Flexibility in pace and location.",
+                            "Lower tuition fees."
+                        ],
+                        answer: "Flexibility in pace and location.",
+                        rationale: "The passage explicitly states 'online education provides unparalleled flexibility. Students can access materials at their own pace, from any location'. This directly points to flexibility in pace and location as the primary advantage."
+                    },
+                    {
+                        question: "Passage: 'The novel's protagonist, a disillusioned detective, navigates the dark underbelly of the city. His cynical worldview is a direct result of years spent witnessing the worst of humanity, yet a flicker of hope occasionally surfaces in his relentless pursuit of justice.'\n\nWhat is the protagonist's primary motivation?",
+                        options: [
+                            "Accumulating wealth.",
+                            "Seeking revenge.",
+                            "Relentless pursuit of justice.",
+                            "Escaping the city."
+                        ],
+                        answer: "Relentless pursuit of justice.",
+                        rationale: "The passage states 'a flicker of hope occasionally surfaces in his relentless pursuit of justice.' This indicates that despite his cynicism, his core motivation is the pursuit of justice."
+                    }
                 ]
             },
             written: {
                 title: "English Written",
-                prompt: "In recent years, the rise of remote work has fundamentally altered the professional landscape. Discuss the multifaceted impact of this shift on employee productivity, corporate culture, and the urban economy. In your opinion, is the widespread adoption of remote work a sustainable long-term model for the future of employment? Justify your position with relevant examples and logical arguments. (Word limit: 400-500 words)"
+                questions: [
+                    // This section remains as a placeholder for written questions
+                    {
+                        question: "Write an essay (approx. 200-250 words) on 'The Impact of Artificial Intelligence on Future Employment'. Discuss both positive and negative aspects.",
+                        options: [], // No options for written questions
+                        answer: "", // No fixed answer
+                        rationale: ""
+                    },
+                    {
+                        question: "Compose a formal email to your professor requesting an extension for a project. State a valid reason for the delay.",
+                        options: [],
+                        answer: "",
+                        rationale: ""
+                    },
+                    {
+                        question: "Describe a challenging situation you faced and how you overcame it. (Approx. 150-200 words)",
+                        options: [],
+                        answer: "",
+                        rationale: ""
+                    },
+                    {
+                        question: "Explain the concept of 'Big Data' in simple terms to a non-technical audience. (Approx. 100-150 words)",
+                        options: [],
+                        answer: "",
+                        rationale: ""
+                    },
+                    {
+                        question: "Write a short paragraph (approx. 80-100 words) arguing for or against the use of social media for news consumption.",
+                        options: [],
+                        answer: "",
+                        rationale: ""
+                    }
+                ]
             },
             coding: {
                 title: "Coding Questions",
                 questions: [
+                    // This section remains as a placeholder for coding questions
                     {
-                        title: "1. Maximum Subarray Sum with One Deletion (Medium)",
-                        prompt: "Given an array of integers, return the maximum sum for a non-empty subarray (contiguous elements) with at most one element deletion. In other words, you want to choose a subarray and optionally delete one element from it so that the sum of the remaining elements is maximized. The subarray must be non-empty after the deletion.",
-                        examples: [
-                            "<b>Example 1:</b><br>Input: arr = [1, -2, 0, 3]<br>Output: 4<br>Explanation: By choosing the subarray [1, -2, 0, 3] and deleting -2, we get the subarray [1, 0, 3] with a sum of 4.",
-                            "<b>Example 2:</b><br>Input: arr = [1, -2, -2, 3]<br>Output: 3<br>Explanation: The subarray [3] has the maximum sum 3.",
-                            "<b>Example 3:</b><br>Input: arr = [-1, -1, -1, -1]<br>Output: -1<br>Explanation: The subarray [-1] has the maximum sum -1. We must choose a non-empty subarray."
-                        ]
+                        question: "Write a Python function to reverse a singly linked list. Include comments explaining your logic.",
+                        options: [],
+                        answer: "",
+                        rationale: ""
                     },
                     {
-                        title: "2. Trapping Rain Water II (Hard)",
-                        prompt: "Given an m x n integer matrix heightMap representing the height of each unit cell in a 2D elevation map, return the volume of water it can trap after raining. Water can be trapped in areas surrounded by higher ground.",
-                        examples: [
-                            "<b>Example 1:</b><br>Input: heightMap = [[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]]<br>Output: 4<br>Explanation: The illustration shows the water level at each cell. The total volume of trapped water is 4.",
-                            "<b>Example 2:</b><br>Input: heightMap = [[3,3,3,3,3],[3,2,2,2,3],[3,2,1,2,3],[3,2,2,2,3],[3,3,3,3,3]]<br>Output: 10"
-                        ]
+                        question: "Implement a function in Java to check if a given string is a palindrome. Optimize for time and space complexity.",
+                        options: [],
+                        answer: "",
+                        rationale: ""
+                    },
+                    {
+                        question: "Given an array of integers, write a C++ program to find the maximum sum of a contiguous subarray (Kadane's Algorithm).",
+                        options: [],
+                        answer: "",
+                        rationale: ""
+                    },
+                    {
+                        question: "Write a JavaScript function that takes an array of objects and a key, and returns a new array sorted by the value of that key in ascending order.",
+                        options: [],
+                        answer: "",
+                        rationale: ""
+                    },
+                    {
+                        question: "Design a simple class in Python for a 'Book' with attributes like title, author, and ISBN, and methods to display book info.",
+                        options: [],
+                        answer: "",
+                        rationale: ""
                     }
                 ]
             }
         };
-        
-        // The addPlaceholders function is no longer needed as all questions are now explicitly defined.
-        // const addPlaceholders = (sectionKey, count) => {
-        //     const section = quizData[sectionKey];
-        //     const existingCount = section.questions.length;
-        //     for (let i = existingCount + 1; i <= count; i++) {
-        //         section.questions.push({
-        //             question: `This is placeholder question #${i} for the ${section.title} section.`,
-        //             options: ["Option A", "Option B", "Option C", "Option D"],
-        //             answer: "Option A",
-        //             rationale: `This is the rationale for the placeholder question #${i}. The correct answer is always Option A for these placeholders.`
-        //         });
-        //     }
-        // };
 
-        // No need to call addPlaceholders anymore as questions are hardcoded.
-        // addPlaceholders('reasoning', 30);
-        // addPlaceholders('dsa', 30);
-        // addPlaceholders('english', 30);
-
-        let currentSection = 'qa';
+        let currentSection = 'qa'; // Default to QA
+        let timeLeft = 3 * 60 * 60; // 3 hours in seconds
         let timerInterval;
 
-        function renderQuestions() {
+        // Function to load questions from quizData
+        function loadQuestions(section) {
             const form = document.getElementById('quiz-form');
-            form.innerHTML = ''; // Clear previous content
+            form.innerHTML = ''; // Clear previous questions
 
-            for (const sectionKey in quizData) {
-                const sectionData = quizData[sectionKey];
-                const sectionDiv = document.createElement('div');
-                sectionDiv.id = `section-${sectionKey}`;
-                sectionDiv.className = 'section-container bg-white shadow-md rounded-lg p-6 mb-6';
-                if (sectionKey !== currentSection) {
-                    sectionDiv.classList.add('hidden');
+            const sectionData = quizData[section];
+            const sectionDiv = document.createElement('div');
+            sectionDiv.id = `section-${section}`;
+            sectionDiv.className = 'section-container bg-white shadow-md rounded-lg p-6 mb-6';
+
+            const title = document.createElement('h2');
+            title.className = 'text-2xl font-bold mb-6 border-b pb-4';
+            title.textContent = sectionData.title;
+            sectionDiv.appendChild(title);
+            
+            sectionData.questions.forEach((q, index) => {
+                const questionWrapper = document.createElement('div');
+                questionWrapper.className = 'mb-8 question-container';
+
+                const questionText = document.createElement('p');
+                questionText.className = 'font-semibold text-lg mb-4';
+                questionText.innerHTML = `${index + 1}. ${q.question}`;
+                questionWrapper.appendChild(questionText);
+
+                // Add code block if present
+                if (q.code) {
+                    const pre = document.createElement('pre');
+                    const code = document.createElement('code');
+                    code.textContent = q.code.trim();
+                    pre.appendChild(code);
+                    questionWrapper.appendChild(pre);
                 }
 
-                const title = document.createElement('h2');
-                title.className = 'text-2xl font-bold mb-6 border-b pb-4';
-                title.textContent = sectionData.title;
-                sectionDiv.appendChild(title);
-                
-                if (sectionData.questions && sectionData.questions[0].options) { // Check if it's an MCQ section
-                    sectionData.questions.forEach((q, index) => {
-                        const questionWrapper = document.createElement('div');
-                        questionWrapper.className = 'mb-8';
+                const optionsWrapper = document.createElement('div');
+                optionsWrapper.className = 'space-y-3';
 
-                        const questionText = document.createElement('p');
-                        questionText.className = 'font-semibold text-lg mb-4';
-                        questionText.innerHTML = `${index + 1}. ${q.question}`;
-                        questionWrapper.appendChild(questionText);
-
-                        const optionsWrapper = document.createElement('div');
-                        optionsWrapper.className = 'space-y-3';
-
-                        q.options.forEach(option => {
-                            const label = document.createElement('label');
-                            label.className = 'flex items-center p-3 border rounded-lg hover:bg-gray-50 cursor-pointer';
-                            
-                            const radio = document.createElement('input');
-                            radio.type = 'radio';
-                            radio.name = `${sectionKey}-q${index}`;
-                            radio.value = option;
-                            radio.className = 'mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300';
-                            
-                            label.appendChild(radio);
-                            label.append(option);
-                            optionsWrapper.appendChild(label);
-                        });
-                        questionWrapper.appendChild(optionsWrapper);
-                        sectionDiv.appendChild(questionWrapper);
-                    });
-                } else if (sectionData.prompt) { // For written section
-                    const promptText = document.createElement('p');
-                    promptText.className = 'text-gray-700 italic mb-4';
-                    promptText.innerHTML = sectionData.prompt;
-                    sectionDiv.appendChild(promptText);
-
-                    const textarea = document.createElement('textarea');
-                    textarea.id = 'written-answer';
-                    textarea.rows = '15';
-                    textarea.className = 'w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500';
-                    textarea.placeholder = 'Type your essay here...';
-                    sectionDiv.appendChild(textarea);
-                } else if (sectionData.questions && sectionData.questions[0].title) { // For coding section (check for title property as a distinguishing feature)
-                    sectionData.questions.forEach((q, index) => {
-                        const codingWrapper = document.createElement('div');
-                        codingWrapper.className = 'mb-12';
-
-                        const qTitle = document.createElement('h3');
-                        qTitle.className = 'text-xl font-bold mb-2';
-                        qTitle.innerHTML = q.title;
-                        codingWrapper.appendChild(qTitle);
+                // Render options for MCQ type questions
+                if (q.options && q.options.length > 0) {
+                    q.options.forEach(option => {
+                        const label = document.createElement('label');
+                        label.className = 'flex items-start p-3 border rounded-lg hover:bg-gray-50 cursor-pointer';
                         
-                        const qPrompt = document.createElement('p');
-                        qPrompt.className = 'text-gray-700 mb-4';
-                        qPrompt.innerHTML = q.prompt;
-                        codingWrapper.appendChild(qPrompt);
-
-                        if(q.examples) {
-                            const examplesDiv = document.createElement('div');
-                            examplesDiv.className = 'bg-gray-50 p-4 rounded-lg border';
-                            q.examples.forEach(ex => {
-                                const exampleText = document.createElement('p');
-                                exampleText.className = 'text-sm font-mono mb-2';
-                                exampleText.innerHTML = ex;
-                                examplesDiv.appendChild(exampleText);
-                            });
-                            codingWrapper.appendChild(examplesDiv);
-                        }
-
-                        const textarea = document.createElement('textarea');
-                        textarea.id = `coding-answer-${index}`;
-                        textarea.rows = '20';
-                        textarea.className = 'w-full p-3 border rounded-lg focus:ring-blue-500 focus:border-blue-500 mt-4 font-mono text-sm';
-                        textarea.placeholder = 'Type your code solution here...';
-                        codingWrapper.appendChild(textarea);
-                        sectionDiv.appendChild(codingWrapper);
+                        const radio = document.createElement('input');
+                        radio.type = 'radio';
+                        radio.name = `${section}-q${index}`; // Unique name per section
+                        radio.value = option;
+                        radio.className = 'mt-1 mr-3 h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300';
+                        
+                        label.appendChild(radio);
+                        label.append(option);
+                        optionsWrapper.appendChild(label);
                     });
+                } else {
+                    // For written/coding questions, provide a textarea
+                    const textarea = document.createElement('textarea');
+                    textarea.name = `${section}-q${index}-answer`;
+                    textarea.rows = 10;
+                    textarea.className = 'mt-2 block w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500';
+                    textarea.placeholder = `Write your answer for question ${index + 1} here...`;
+                    optionsWrapper.appendChild(textarea);
                 }
-                form.appendChild(sectionDiv);
+                
+                questionWrapper.appendChild(optionsWrapper);
+                sectionDiv.appendChild(questionWrapper);
+            });
+            form.appendChild(sectionDiv);
+        }
+
+        // Function to show selected section
+        function showSection(sectionId) {
+            currentSection = sectionId;
+            // Update active state in navigation
+            document.querySelectorAll('.section-nav').forEach(button => {
+                button.classList.remove('section-active');
+            });
+            document.getElementById(`nav-${sectionId}`).classList.add('section-active');
+            loadQuestions(sectionId);
+        }
+
+        // Timer functions
+        function updateTimer() {
+            const timerElement = document.getElementById('timer');
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+
+            timerElement.textContent = 
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                submitTest();
+                alert("Time's up! Your test has been submitted automatically.");
+            } else {
+                timeLeft--;
             }
         }
 
-        function showSection(sectionKey) {
-            currentSection = sectionKey;
-            document.querySelectorAll('.section-container').forEach(sec => sec.classList.add('hidden'));
-            document.getElementById(`section-${sectionKey}`).classList.remove('hidden');
-
-            document.querySelectorAll('.section-nav').forEach(nav => nav.classList.remove('section-active'));
-            document.getElementById(`nav-${sectionKey}`).classList.add('section-active');
-            
-            window.scrollTo(0, 0);
-        }
-        
-        function startTimer(duration, display) {
-            let timer = duration, hours, minutes, seconds;
-            timerInterval = setInterval(function () {
-                hours = parseInt(timer / 3600, 10);
-                minutes = parseInt((timer % 3600) / 60, 10);
-                seconds = parseInt(timer % 60, 10);
-
-                hours = hours < 10 ? "0" + hours : hours;
-                minutes = minutes < 10 ? "0" + minutes : minutes;
-                seconds = seconds < 10 ? "0" + seconds : seconds;
-
-                display.textContent = hours + ":" + minutes + ":" + seconds;
-
-                if (--timer < 0) {
-                    clearInterval(timerInterval);
-                    alert("Time's up!");
-                    submitTest();
-                }
-            }, 1000);
+        function startTimer() {
+            timerInterval = setInterval(updateTimer, 1000);
         }
 
+        // Function to submit the test and show results
         function submitTest() {
-            clearInterval(timerInterval);
+            clearInterval(timerInterval); // Stop the timer
+
             const resultsContainer = document.getElementById('results-container');
             const testContainer = document.getElementById('test-container');
             
             testContainer.classList.add('hidden');
             resultsContainer.classList.remove('hidden');
 
-            let resultsHTML = `<div class="bg-white shadow-md rounded-lg p-6">
-                <h1 class="text-3xl font-bold text-center mb-6">Test Results</h1>`;
+            let resultsHTML = `<div class="bg-white shadow-md rounded-lg p-6 mb-6">
+                <h1 class="text-3xl font-bold text-center mb-6">Test Results Summary</h1>`;
 
-            let totalCorrect = 0;
-            let totalAttempted = 0;
-            let totalQuestions = 0;
+            let overallCorrect = 0;
+            let overallTotal = 0;
 
-            // Grade MCQ sections
-            ['qa', 'reasoning', 'dsa', 'english'].forEach(sectionKey => {
+            for (const sectionKey in quizData) {
                 const sectionData = quizData[sectionKey];
-                let score = 0;
-                let attempted = 0;
-                
-                resultsHTML += `<div class="mb-8"><h2 class="text-2xl font-bold mb-4 border-b pb-2">${sectionData.title}</h2>`;
+                let sectionCorrect = 0;
+                let sectionAttempted = 0;
+                let sectionTotal = sectionData.questions.length;
 
-                sectionData.questions.forEach((q, index) => {
-                    totalQuestions++;
-                    const selectedOption = document.querySelector(`input[name="${sectionKey}-q${index}"]:checked`);
-                    
-                    resultsHTML += `<div class="mb-6 p-4 border rounded-lg">
-                        <p class="font-semibold text-lg">${index + 1}. ${q.question}</p>`;
+                // Only process MCQ sections for scoring
+                if (['qa', 'reasoning', 'dsa', 'english'].includes(sectionKey)) {
+                    sectionData.questions.forEach((q, index) => {
+                        const selectedOption = document.querySelector(`input[name="${sectionKey}-q${index}"]:checked`);
+                        if (selectedOption) {
+                            sectionAttempted++;
+                            if (selectedOption.value === q.answer) {
+                                sectionCorrect++;
+                            }
+                        }
+                    });
+                    overallCorrect += sectionCorrect;
+                    overallTotal += sectionTotal;
 
-                    if (selectedOption) {
-                        attempted++;
-                        totalAttempted++;
-                        if (selectedOption.value === q.answer) {
-                            score++;
-                            totalCorrect++;
-                            resultsHTML += `<p class="mt-2">Your answer: <span class="font-medium results-correct">${selectedOption.value} (Correct)</span></p>`;
+                    resultsHTML += `<div class="mb-8 p-4 border rounded-lg bg-gray-50">
+                        <h2 class="text-2xl font-bold mb-2">${sectionData.title}</h2>
+                        <p class="text-lg">Score: <span class="font-bold results-correct">${sectionCorrect}</span> / <span class="font-bold">${sectionTotal}</span></p>
+                        <p class="text-md text-gray-600">Attempted: ${sectionAttempted}, Unattempted: ${sectionTotal - sectionAttempted}</p>
+                    </div>`;
+                } else {
+                    // For written/coding sections, just show a placeholder in summary
+                    resultsHTML += `<div class="mb-8 p-4 border rounded-lg bg-gray-50">
+                        <h2 class="text-2xl font-bold mb-2">${sectionData.title}</h2>
+                        <p class="text-lg text-gray-700">This section requires manual review.</p>
+                    </div>`;
+                }
+            }
+
+            resultsHTML += `<div class="mt-8 text-center bg-blue-100 p-6 rounded-lg">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Overall Score: ${overallCorrect} / ${overallTotal}</h2>
+                <button onclick="window.location.reload()" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors text-xl">
+                    Retake Test
+                </button>
+            </div>`;
+
+            // Detailed results section
+            resultsHTML += `<div class="mt-8 bg-white shadow-md rounded-lg p-6">
+                <h2 class="text-2xl font-bold text-center mb-6 border-b pb-4">Detailed Results</h2>`;
+
+            for (const sectionKey in quizData) {
+                const sectionData = quizData[sectionKey];
+                if (['qa', 'reasoning', 'dsa', 'english'].includes(sectionKey)) {
+                    resultsHTML += `<div class="mb-8"><h3 class="text-xl font-bold mb-4 border-b pb-2">${sectionData.title}</h3>`;
+                    sectionData.questions.forEach((q, index) => {
+                        const selectedOption = document.querySelector(`input[name="${sectionKey}-q${index}"]:checked`);
+                        
+                        resultsHTML += `<div class="mb-6 p-4 border rounded-lg">
+                            <p class="font-semibold text-lg">${index + 1}. ${q.question}</p>`;
+                        
+                        if (q.code) {
+                            resultsHTML += `<pre><code>${q.code.trim()}</code></pre>`;
+                        }
+
+                        if (selectedOption) {
+                            if (selectedOption.value === q.answer) {
+                                resultsHTML += `<p class="mt-2">Your answer: <span class="font-medium results-correct">${selectedOption.value} (Correct)</span></p>`;
+                            } else {
+                                resultsHTML += `<p class="mt-2">Your answer: <span class="font-medium results-incorrect">${selectedOption.value} (Incorrect)</span></p>
+                                              <p class="mt-1">Correct answer: <span class="font-medium results-correct">${q.answer}</span></p>`;
+                            }
                         } else {
-                            resultsHTML += `<p class="mt-2">Your answer: <span class="font-medium results-incorrect">${selectedOption.value} (Incorrect)</span></p>
+                            resultsHTML += `<p class="mt-2 text-gray-500">You did not answer this question.</p>
                                           <p class="mt-1">Correct answer: <span class="font-medium results-correct">${q.answer}</span></p>`;
                         }
-                    } else {
-                        resultsHTML += `<p class="mt-2 text-gray-500">You did not answer this question.</p>
-                                      <p class="mt-1">Correct answer: <span class="font-medium results-correct">${q.answer}</span></p>`;
-                    }
 
-                    resultsHTML += `<div class="rationale mt-3 p-3">
-                        <p class="font-semibold text-sm text-gray-700">Rationale:</p>
-                        <p class="text-sm text-gray-600">${q.rationale}</p>
-                        </div></div>`;
-                });
-
-                resultsHTML += `<div class="bg-blue-50 p-4 rounded-lg text-center font-semibold text-blue-800">
-                    Section Score: ${score} / ${sectionData.questions.length}
-                    </div></div>`;
-            });
-
-            // Summary
-             resultsHTML = `<div class="bg-white shadow-md rounded-lg p-6 mb-6">
-                <h2 class="text-3xl font-bold text-center mb-4">Overall Summary</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-                    <div class="bg-green-100 p-4 rounded-lg">
-                        <p class="text-lg font-semibold text-green-800">Correct</p>
-                        <p class="text-3xl font-bold text-green-600">${totalCorrect}</p>
-                    </div>
-                    <div class="bg-red-100 p-4 rounded-lg">
-                        <p class="text-lg font-semibold text-red-800">Incorrect</p>
-                        <p class="text-3xl font-bold text-red-600">${totalAttempted - totalCorrect}</p>
-                    </div>
-                     <div class="bg-gray-100 p-4 rounded-lg">
-                        <p class="text-lg font-semibold text-gray-800">Unanswered</p>
-                        <p class="text-3xl font-bold text-gray-600">${totalQuestions - totalAttempted}</p>
-                    </div>
-                </div>
-                 <div class="mt-6 text-center">
-                    <p class="text-xl font-bold">Total Score: ${totalCorrect} / ${totalQuestions}</p>
-                </div>
-            </div>` + resultsHTML;
-
-            // Display Written and Coding answers
-            const writtenAnswer = document.getElementById('written-answer').value;
-            resultsHTML += `<div class="bg-white shadow-md rounded-lg p-6 mb-6">
-                <h2 class="text-2xl font-bold mb-4 border-b pb-2">${quizData.written.title}</h2>
-                <h3 class="font-semibold text-lg mb-2">Your Essay:</h3>
-                <div class="bg-gray-50 p-4 rounded-lg border whitespace-pre-wrap">${writtenAnswer || 'No answer provided.'}</div>
-                </div>`;
-
-            const codingAnswersHTML = quizData.coding.questions.map((q, index) => {
-                const codingAnswer = document.getElementById(`coding-answer-${index}`).value;
-                return `<div class="mb-8">
-                    <h3 class="font-semibold text-lg mb-2">${q.title}</h3>
-                    <div class="bg-gray-800 text-white font-mono text-sm p-4 rounded-lg whitespace-pre-wrap overflow-x-auto">${codingAnswer || '// No answer provided.'}</div>
-                    </div>`;
-            }).join('');
-            
-            resultsHTML += `<div class="bg-white shadow-md rounded-lg p-6 mb-6">
-                <h2 class="text-2xl font-bold mb-4 border-b pb-2">${quizData.coding.title}</h2>
-                ${codingAnswersHTML}
-                </div>`;
-            
-            resultsHTML += `</div>`; // Closing results container div
+                        resultsHTML += `<div class="rationale mt-3 p-3">
+                            <p class="font-semibold text-sm text-gray-700">Rationale:</p>
+                            <p class="text-sm text-gray-600">${q.rationale}</p>
+                            </div></div>`;
+                    });
+                    resultsHTML += `</div>`; // Close section div
+                } else {
+                    // For written/coding, display the entered text
+                    resultsHTML += `<div class="mb-8"><h3 class="text-xl font-bold mb-4 border-b pb-2">${sectionData.title}</h3>`;
+                    sectionData.questions.forEach((q, index) => {
+                        const textarea = document.querySelector(`textarea[name="${sectionKey}-q${index}-answer"]`);
+                        resultsHTML += `<div class="mb-6 p-4 border rounded-lg">
+                            <p class="font-semibold text-lg">${index + 1}. ${q.question}</p>`;
+                        if (textarea && textarea.value.trim() !== '') {
+                            resultsHTML += `<p class="mt-2 text-gray-700">Your response:</p><pre class="text-sm">${textarea.value.trim()}</pre>`;
+                        } else {
+                            resultsHTML += `<p class="mt-2 text-gray-500">No response provided.</p>`;
+                        }
+                        resultsHTML += `</div>`;
+                    });
+                    resultsHTML += `</div>`; // Close section div
+                }
+            }
+            resultsHTML += `</div>`; // Close detailed results container
             resultsContainer.innerHTML = resultsHTML;
         }
 
         window.onload = () => {
-            renderQuestions();
-            const threeHours = 60 * 60 * 3;
-            const display = document.querySelector('#timer');
-            startTimer(threeHours, display);
+            showSection(currentSection); // Load initial section
+            startTimer(); // Start the timer
         };
     </script>
 </body>
